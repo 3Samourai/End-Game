@@ -183,7 +183,7 @@ background-color: #2980b9;
       <img id=oneIMG alt="Avatar" style="width:300px;height:300px;">
     </div>
     <div class="flip-card-back" id="oneText">
-   <h1 style="font-size: 25px;">PS4</h1>
+   <h1 style="font-size: 25px;">Loading</h1>
       <p>2013r</p>
       <p>5/5</p>
       <p>Descrption:</p>
@@ -200,7 +200,7 @@ background-color: #2980b9;
       <img id=twoIMG alt="No Find" style="width:300px;height:300px;">
     </div>
     <div class="flip-card-back" id="twoText">
-       <h1 style="font-size: 25px;">PS4</h1>
+       <h1 style="font-size: 25px;">Loading</h1>
       <p>2013r</p>
       <p>5/5</p>
       <p>Descrption:</p>
@@ -218,7 +218,7 @@ background-color: #2980b9;
       <img  id=treeIMG alt="Avatar" style="width:300px;height:300px;">
     </div>
     <div class="flip-card-back" id="treeText">
-       <h1 style="font-size: 25px;">PS4</h1>
+       <h1 style="font-size: 25px;">Loading</h1>
       <p>2013r</p>
       <p>5/5</p>
       <p>Descrption:</p>
@@ -236,7 +236,7 @@ background-color: #2980b9;
       <img id=fourIMG alt="Avatar" style="width:300px;height:300px;">
     </div>
     <div class="flip-card-back" id="fourText">
-       <h1 style="font-size: 25px;">PS4</h1>
+       <h1 style="font-size: 25px;">Loading</h1>
       <p>2013r</p>
       <p>5/5</p>
       <p>Descrption:</p>
@@ -254,7 +254,7 @@ background-color: #2980b9;
       <img id=fiveIMG alt="Avatar" style="width:300px;height:300px;">
     </div>
     <div class="flip-card-back" id="fiveText">
-      <h1 style="font-size: 25px;">PS4</h1>
+      <h1 style="font-size: 25px;">Loading</h1>
       <p>2013r</p>
       <p>5/5</p>
       <p>Descrption:</p>
@@ -272,7 +272,7 @@ background-color: #2980b9;
       <img id=sixIMG alt="Avatar" style="width:300px;height:300px;">
     </div>
     <div class="flip-card-back" id="sixText">
-       <h1 style="font-size: 25px;">PS4</h1>
+       <h1 style="font-size: 25px;">Loading</h1>
       <p>2013r</p>
       <p>5/5</p>
       <p>Descrption:</p>
@@ -290,7 +290,7 @@ background-color: #2980b9;
       <img id=sevenIMG alt="Avatar" style="width:300px;height:300px;">
     </div>
     <div class="flip-card-back" id="sevenText">
-       <h1 style="font-size: 25px;">PS4</h1>
+       <h1 style="font-size: 25px;">Loading</h1>
       <p>2013r</p>
       <p>5/5</p>
       <p>Descrption:</p>
@@ -308,7 +308,7 @@ background-color: #2980b9;
       <img id=eightIMG alt="Avatar" style="width:300px;height:300px;">
     </div>
     <div class="flip-card-back" id="eightText">
-       <h1 style="font-size: 25px;">PS4</h1>
+       <h1 style="font-size: 25px;">Loading</h1>
       <p>2013r</p>
       <p>5/5</p>
       <p>Descrption:</p>
@@ -326,7 +326,7 @@ background-color: #2980b9;
       <img id=nineIMG alt="Avatar" style="width:300px;height:300px;">
     </div>
     <div class="flip-card-back" id="nineText">
-       <h1>PS4</h1>
+       <h1>Loading</h1>
       <p>2013r</p>
       <p>5/5</p>
       <p>Descrption:</p>
@@ -464,7 +464,7 @@ var date = Newvalue.firstReleaseDate.slice(0,10);
   if (oneIMG.src === "")
   {
 	  oneIMG.src = IMGData;
-  oneChild[0].outerHTML = "<h1>"+ Newvalue.name +"</h1>";
+  oneChild[0].outerHTML = "<h1 style=\"font-size: 20px;\">"+ Newvalue.name +"</h1>";
   oneChild[1].outerHTML = "<p>"+ "Release Date: " + date + "</p>";
   oneChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
   oneChild[4].outerHTML = "<p style=\"font-size: 9px;\">"+ description + "</p>";
@@ -475,7 +475,7 @@ var date = Newvalue.firstReleaseDate.slice(0,10);
   else if (twoIMG.src === "")
   {
   twoIMG.src = IMGData;
-   twoChild[0].outerHTML = "<h1>"+ Newvalue.name +"</h1>";
+   twoChild[0].outerHTML = "<h1 style=\"font-size: 20px;\">"+ Newvalue.name +"</h1>";
    twoChild[1].outerHTML = "<p>"+ "Release Date: " + date + "</p>";
   twoChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
    twoChild[4].outerHTML = "<p style=\"font-size: 9px;\">"+ description + "</p>";
@@ -486,7 +486,7 @@ twoChild[5].outerHTML = "<p>"+"Editor: " + editor + "</p>";
    else if (treeIMG.src === "")
   {
   treeIMG.src = IMGData;
-  treeChild[0].outerHTML = "<h1>"+ Newvalue.name +"</h1>";
+  treeChild[0].outerHTML = "<h1 style=\"font-size: 20px;\">"+ Newvalue.name +"</h1>";
   treeChild[1].outerHTML = "<p>"+ "Release Date: " + date + "</p>";
   treeChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
   treeChild[4].outerHTML = "<p style=\"font-size: 9px;\">"+ description + "</p>";
@@ -497,7 +497,7 @@ treeChild[5].outerHTML = "<p>"+"Editor: " + editor + "</p>";
    else if (fourIMG.src === "")
   {
   fourIMG.src = IMGData;
-  fourChild[0].outerHTML = "<h1>"+ Newvalue.name +"</h1>";
+  fourChild[0].outerHTML = "<h1 style=\"font-size: 20px;\">"+ Newvalue.name +"</h1>";
   fourChild[1].outerHTML = "<p>"+ "Release Date: " + date + "</p>";
   fourChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
   fourChild[4].outerHTML = "<p style=\"font-size: 9px;\">"+ description + "</p>";
@@ -508,7 +508,7 @@ fourChild[5].outerHTML = "<p>"+"Editor: " + editor + "</p>";
    else if (fiveIMG.src === "")
   {
   fiveIMG.src = IMGData;
-  fiveChild[0].outerHTML = "<h1>"+ Newvalue.name +"</h1>";
+  fiveChild[0].outerHTML = "<h1 style=\"font-size: 20px;\">"+ Newvalue.name +"</h1>";
   fiveChild[1].outerHTML = "<p>"+ "Release Date: " + date + "</p>";
   fiveChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
   fiveChild[4].outerHTML = "<p style=\"font-size: 9px;\">"+ description + "</p>";
@@ -519,7 +519,7 @@ fiveChild[5].outerHTML = "<p>"+"Editor: " + editor + "</p>";
    else if (sixIMG.src === "")
   {
   sixIMG.src = IMGData;
-  sixChild[0].outerHTML = "<h1>"+ Newvalue.name +"</h1>";
+  sixChild[0].outerHTML = "<h1 style=\"font-size: 20px;\">"+ Newvalue.name +"</h1>";
   sixChild[1].outerHTML = "<p>"+ "Release Date: " + date + "</p>";
   sixChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
   sixChild[4].outerHTML = "<p style=\"font-size: 9px;\">"+ description + "</p>";
@@ -530,7 +530,7 @@ sixChild[5].outerHTML = "<p>"+"Editor: " + editor + "</p>";
    else if (sevenIMG.src === "")
   {
   sevenIMG.src = IMGData;
-  sevenChild[0].outerHTML = "<h1>"+ Newvalue.name +"</h1>";
+  sevenChild[0].outerHTML = "<h1 style=\"font-size: 20px;\">"+ Newvalue.name +"</h1>";
   sevenChild[1].outerHTML = "<p>"+ "Release Date: " + date + "</p>";
   sevenChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
   sevenChild[4].outerHTML = "<p style=\"font-size: 9px;\">"+ description + "</p>";
@@ -541,7 +541,7 @@ sevenChild[5].outerHTML = "<p>"+"Editor: " + editor + "</p>";
    else if (eightIMG.src === "")
   {
   eightIMG.src = IMGData;
-  eightChild[0].outerHTML = "<h1>"+ Newvalue.name +"</h1>";
+  eightChild[0].outerHTML = "<h1 style=\"font-size: 20px;\">"+ Newvalue.name +"</h1>";
   eightChild[1].outerHTML = "<p>"+ "Release Date: " + date + "</p>";
   eightChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
   eightChild[4].outerHTML = "<p style=\"font-size: 9px;\">"+ description + "</p>";
@@ -552,7 +552,7 @@ eightChild[5].outerHTML = "<p>"+"Editor: " + editor + "</p>";
      else if (nineIMG.src === "")
   {
   nineIMG.src = IMGData;
-  nineChild[0].outerHTML = "<h1>"+ Newvalue.name +"</h1>";
+  nineChild[0].outerHTML = "<h1 style=\"font-size: 20px;\">"+ Newvalue.name +"</h1>";
   nineChild[1].outerHTML = "<p>"+ "Release Date: " + date + "</p>";
   nineChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
   nineChild[4].outerHTML = "<p style=\"font-size: 9px;\">"+ description + "</p>";
