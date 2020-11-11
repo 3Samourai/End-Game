@@ -282,7 +282,7 @@ input:checked + .slide-container .nav label { display: block; }
   </header>
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="./Home.html">Home</a>
+    <a href="./index.md">Home</a>
   <a href="./Console.html">Console</a>
   <a href="./TopGames.html">Top Games</a>
  </div>
