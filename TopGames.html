@@ -1,0 +1,550 @@
+<html>
+<head>
+	/*Code of 3Samourai*/
+	<meta charset="UTF-8">
+	<title>End Game - Top Games</title>
+	</head>
+<body>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"> 
+<style>
+	
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+p {
+	font-size: 15px;
+}
+
+.editor {
+	font-size: 9px;
+}
+	
+ input[type=text] {
+  padding: 6px;
+  margin-top: 6px;
+  font-size: 17px;
+  border: none;
+}
+
+button {
+  float: right;
+   margin-top: 6px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+ button:hover {
+  background: #ccc;
+}
+
+footer {
+	 z-index: 1;
+  background-color: #EC524B;
+  padding-bottom: 30px;
+
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+#box {
+  height:200px;
+  width: 240px;
+  display: grid;
+   place-items: center;
+    background-color: #8c8c8c;
+    
+}
+
+grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 45px;
+  grid-gap: 10px;
+}
+
+grid-item {
+  margin: auto;
+}
+
+
+header {
+background-color: #EC524B
+}
+ /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+/* Style the back side */
+.flip-card-back {
+background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+} 
+</style>
+<div id="main">
+<header>
+<grid-container>
+  <grid-item>
+<span style="font-size:30px;cursor:pointer;padding-right: 300px;" onclick="openNav()">&#9776; </span>
+  </grid-item>
+    <grid-item>
+<a>#EndGame</a>
+  </grid-item>
+  <grid-item>
+  <form action="/search.html">
+      <input type="text" placeholder="Search.." name="search">
+          </form>
+</grid-item>
+  </grid-container>
+  </header>
+<grid-container id="mainContainer" style="margin-top: 27.5px;">
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="./index.html">Home</a>
+  <a href="./Console.html">Console</a>
+  <a href="./TopGames.html">Top Games</a>
+</div>
+  <grid-item>
+ <div class="flip-card">
+  <div class="flip-card-inner roundedImage">
+    <div class="flip-card-front">
+      <img id=oneIMG alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back" id="oneText">
+   <h1 style="font-size: 25px;">PS4</h1>
+      <p>2013r</p>
+      <p>5/5</p>
+      <p>Descrption:</p>
+      <p></p>
+      <p>editor</p>
+    </div>
+  </div>
+</div>
+  </grid-item> 
+    <grid-item>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img id=twoIMG alt="No Find" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back" id="twoText">
+       <h1 style="font-size: 25px;">PS4</h1>
+      <p>2013r</p>
+      <p>5/5</p>
+      <p>Descrption:</p>
+      <p style="font-size: 12px;"></p>
+            <p>editor</p>
+
+    </div>
+  </div>
+</div> 
+  </grid-item>
+  <grid-item>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img  id=treeIMG alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back" id="treeText">
+       <h1 style="font-size: 25px;">PS4</h1>
+      <p>2013r</p>
+      <p>5/5</p>
+      <p>Descrption:</p>
+      <p style="font-size: 12px;"></p>
+            <p>editor</p>
+
+    </div>
+  </div>
+</div> 
+  </grid-item>
+<grid-item style="margin-top: 300px;">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img id=fourIMG alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back" id="fourText">
+       <h1 style="font-size: 25px;">PS4</h1>
+      <p>2013r</p>
+      <p>5/5</p>
+      <p>Descrption:</p>
+      <p style="font-size: 12px;"></p>
+            <p>editor</p>
+
+    </div>
+  </div>
+</div> 
+  </grid-item>
+  <grid-item style="margin-top: 300px;">
+ <div class="flip-card">
+  <div class="flip-card-inner roundedImage">
+    <div class="flip-card-front">
+      <img id=fiveIMG alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back" id="fiveText">
+      <h1 style="font-size: 25px;">PS4</h1>
+      <p>2013r</p>
+      <p>5/5</p>
+      <p>Descrption:</p>
+      <p style="font-size: 12px;"></p>
+            <p>editor</p>
+
+    </div>
+  </div>
+</div>
+  </grid-item> 
+    <grid-item style="margin-top: 300px;" >
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img id=sixIMG alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back" id="sixText">
+       <h1 style="font-size: 25px;">PS4</h1>
+      <p>2013r</p>
+      <p>5/5</p>
+      <p>Descrption:</p>
+      <p style="font-size: 12px;"></p>
+            <p>editor</p>
+
+    </div>
+  </div>
+</div> 
+  </grid-item>
+  <grid-item  style="margin-top: 600px;">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img id=sevenIMG alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back" id="sevenText">
+       <h1 style="font-size: 25px;">PS4</h1>
+      <p>2013r</p>
+      <p>5/5</p>
+      <p>Descrption:</p>
+      <p style="font-size: 12px;"></p>
+            <p>editor</p>
+
+    </div>
+  </div>
+</div> 
+  </grid-item>
+<grid-item  style="margin-top: 600px;">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img id=eightIMG alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back" id="eightText">
+       <h1 style="font-size: 25px;">PS4</h1>
+      <p>2013r</p>
+      <p>5/5</p>
+      <p>Descrption:</p>
+      <p style="font-size: 12px;"></p>
+            <p>editor</p>
+
+    </div>
+  </div>
+</div> 
+  </grid-item>
+<grid-item  style="margin-top: 600px;">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img id=nineIMG alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back" id="nineText">
+       <h1>PS4</h1>
+      <p>2013r</p>
+      <p>5/5</p>
+      <p>Descrption:</p>
+      <p></p>
+            <p>editor</p>
+
+    </div>
+  </div>
+</div> 
+  </grid-item>
+
+  </grid-container>
+ <footer style="margin-top: 900px;">
+	   <grid-container>
+<grid-item>
+  <p>Author: © <a href="https://github.com/3Samourai/End-Game">3Samourai</a></p>
+  </grid-item>
+  <grid-item name="Network Link">
+  
+  </grid-item>
+  <grid-item>
+  <p>Image, Reviews and Description are provided by <a href="https://opencritic.com/">OpenCritic</a></p>
+  </grid-item>
+  </grid-container>
+
+</footer> 
+    </div>
+    
+<script>
+	
+	/*SmartPhone Alert*/
+	if(window.innerHeight > window.innerWidth){
+    alert("Please use Landscape!");
+}
+
+	
+	/*Start of IMG Element*/
+	var  oneIMG = document.getElementById("oneIMG")
+	var  twoIMG = document.getElementById("twoIMG")
+	var  treeIMG = document.getElementById("treeIMG")
+	var  fourIMG = document.getElementById("fourIMG")
+	var  fiveIMG = document.getElementById("fiveIMG")
+	var  sixIMG = document.getElementById("sixIMG")
+	var  sevenIMG = document.getElementById("sevenIMG")
+	var  eightIMG = document.getElementById("eightIMG")
+	var  nineIMG = document.getElementById("nineIMG")
+	/*End of IMG Element*/
+	
+	/*Start of Text Element*/
+var  oneText = document.getElementById("oneText");
+		var oneChild = oneText.children;
+var  twoText = document.getElementById("twoText");
+		var twoChild = twoText.children;
+var  treeText = document.getElementById("treeText");
+		var treeChild = treeText.children;
+var  fourText = document.getElementById("fourText");
+		var fourChild = fourText.children;
+var  fiveText = document.getElementById("fiveText");
+		var fiveChild = fiveText.children;
+var  sixText = document.getElementById("sixText");
+		var sixChild = sixText.children;
+var  sevenText = document.getElementById("sevenText");
+		var sevenChild = sevenText.children;
+var  eightText = document.getElementById("eightText");
+		var eightChild = eightText.children;
+var  nineText = document.getElementById("nineText");
+		var nineChild = nineText.children;
+    /*End of Text Element*/
+
+
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+} 
+var value;
+var count = 0;
+	 var p2 = new Promise(function(resolve) {
+var requestURL = 'https://api.opencritic.com/api/game/hall-of-fame';
+var request = new XMLHttpRequest();
+request.open('GET', requestURL);
+request.responseType = 'json';
+request.send(); 
+request.onload = function() {
+  value = request.response;
+   resolve(value);
+}
+ }); 
+ p2.then((P2value) => {
+      value.forEach(function(item){
+	  var urlAPI = "https://api.opencritic.com/api/game/"+ P2value[count].id;
+	  count += 1;
+var Newrequest = new XMLHttpRequest();
+Newrequest.open('GET', urlAPI);
+Newrequest.responseType = 'json';
+Newrequest.send();
+Newrequest.onload = function() {
+  var Newvalue = Newrequest.response;
+  var IMGData = "https:"+ Newvalue.bannerScreenshot.fullRes;
+var regex = /([\.\?\!\:\,])/;
+var regexOfDate = /([T])/;
+var match = Newvalue.description.match(regex);
+var index = match.index;
+var description = Newvalue.description.slice(0,index+1);
+var editor = Newvalue.Companies[0].name;
+var matchOfDate = Newvalue.firstReleaseDate.match(regexOfDate);
+var indexOfDate = matchOfDate.index;
+var date = Newvalue.firstReleaseDate.slice(0,10);
+  if (oneIMG.src === "")
+  {
+	  oneIMG.src = IMGData;
+  oneChild[0].outerHTML = "<h1>"+ Newvalue.name +"</h1>";
+  oneChild[1].outerHTML = "<p style=\"font-size: 9px;\">"+ "Release Date: " + date + "</p>";
+  oneChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
+  oneChild[4].outerHTML = "<p style=\"font-size: 9px;\">"+ description + "</p>";
+  oneChild[5].outerHTML = "<p>"+"Editor: " + editor + "</p>";
+
+  
+  }
+  else if (twoIMG.src === "")
+  {
+  twoIMG.src = IMGData;
+   twoChild[0].outerHTML = "<h1>"+ Newvalue.name +"</h1>";
+   twoChild[1].outerHTML = "<p style=\"font-size: 9px;\">"+ "Release Date: " + date + "</p>";
+  twoChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
+   twoChild[4].outerHTML = "<p style=\"font-size: 9px;\">"+ description + "</p>";
+twoChild[5].outerHTML = "<p>"+"Editor: " + editor + "</p>";
+
+
+  }
+   else if (treeIMG.src === "")
+  {
+  treeIMG.src = IMGData;
+  treeChild[0].outerHTML = "<h1>"+ Newvalue.name +"</h1>";
+  treeChild[1].outerHTML = "<p style=\"font-size: 9px;\">"+ "Release Date: " + date + "</p>";
+  treeChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
+  treeChild[4].outerHTML = "<p style=\"font-size: 9px;\">"+ description + "</p>";
+treeChild[5].outerHTML = "<p>"+"Editor: " + editor + "</p>";
+
+
+  }
+   else if (fourIMG.src === "")
+  {
+  fourIMG.src = IMGData;
+  fourChild[0].outerHTML = "<h1>"+ Newvalue.name +"</h1>";
+  fourChild[1].outerHTML = "<p style=\"font-size: 9px;\">"+ "Release Date: " + date + "</p>";
+  fourChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
+  fourChild[4].outerHTML = "<p style=\"font-size: 9px;\">"+ description + "</p>";
+fourChild[5].outerHTML = "<p>"+"Editor: " + editor + "</p>";
+
+
+  }
+   else if (fiveIMG.src === "")
+  {
+  fiveIMG.src = IMGData;
+  fiveChild[0].outerHTML = "<h1>"+ Newvalue.name +"</h1>";
+  fiveChild[1].outerHTML = "<p style=\"font-size: 9px;\">"+ "Release Date: " + date + "</p>";
+  fiveChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
+  fiveChild[4].outerHTML = "<p style=\"font-size: 9px;\">"+ description + "</p>";
+fiveChild[5].outerHTML = "<p>"+"Editor: " + editor + "</p>";
+
+
+  }
+   else if (sixIMG.src === "")
+  {
+  sixIMG.src = IMGData;
+  sixChild[0].outerHTML = "<h1>"+ Newvalue.name +"</h1>";
+  sixChild[1].outerHTML = "<p style=\"font-size: 9px;\">"+ "Release Date: " + date + "</p>";
+  sixChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
+  sixChild[4].outerHTML = "<p style=\"font-size: 9px;\">"+ description + "</p>";
+sixChild[5].outerHTML = "<p>"+"Editor: " + editor + "</p>";
+
+
+  }
+   else if (sevenIMG.src === "")
+  {
+  sevenIMG.src = IMGData;
+  sevenChild[0].outerHTML = "<h1>"+ Newvalue.name +"</h1>";
+  sevenChild[1].outerHTML = "<p style=\"font-size: 9px;\">"+ "Release Date: " + date + "</p>";
+  sevenChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
+  sevenChild[4].outerHTML = "<p style=\"font-size: 9px;\">"+ description + "</p>";
+sevenChild[5].outerHTML = "<p>"+"Editor: " + editor + "</p>";
+
+
+  }
+   else if (eightIMG.src === "")
+  {
+  eightIMG.src = IMGData;
+  eightChild[0].outerHTML = "<h1>"+ Newvalue.name +"</h1>";
+  eightChild[1].outerHTML = "<p style=\"font-size: 9px;\">"+ "Release Date: " + date + "</p>";
+  eightChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
+  eightChild[4].outerHTML = "<p style=\"font-size: 9px;\">"+ description + "</p>";
+eightChild[5].outerHTML = "<p>"+"Editor: " + editor + "</p>";
+
+
+  }
+     else if (nineIMG.src === "")
+  {
+  nineIMG.src = IMGData;
+  nineChild[0].outerHTML = "<h1>"+ Newvalue.name +"</h1>";
+  nineChild[1].outerHTML = "<p style=\"font-size: 9px;\">"+ "Release Date: " + date + "</p>";
+  nineChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
+  nineChild[4].outerHTML = "<p style=\"font-size: 9px;\">"+ description + "</p>";
+nineChild[5].outerHTML = "<p>"+"Editor: " + editor + "</p>";
+
+
+  };
+/*Code of 3Samourai*/
+
+  
+}})});
+
+</script>
+</body>
+</html>
