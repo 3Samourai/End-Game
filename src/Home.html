@@ -1,0 +1,433 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>End Game - Top Games</title>
+	</head>
+<body>
+<style>
+	body {
+	font-family: 'Poppins', sans-serif;
+}
+
+p {
+	font-size: 15px;
+}
+	
+ input[type=text] {
+  padding: 6px;
+  margin-top: 6px;
+  font-size: 17px;
+  border: none;
+}
+
+button {
+  float: right;
+   margin-top: 6px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+ button:hover {
+  background: #ccc;
+}
+
+footer {
+	 z-index: 1;
+  background-color: #EC524B;
+  padding-bottom: 30px;
+
+}
+
+
+	header {
+background-color: #EC524B
+}
+grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 45px;
+  grid-gap: 10px;
+}
+
+grid-item {
+  margin: auto;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+/* Start Carousel */
+
+.carousel {
+   
+}
+
+ul.slides {
+    display: block;
+    position: relative;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+ul.slides input {
+    display: none; 
+}
+
+
+.slide-container { 
+    display: block; 
+}
+
+.slide-image {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+}   
+
+.slide-image img {
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    font-size: 100px;
+    line-height: 600px;
+    color: #fff;
+}
+
+.carousel-controls label {
+    display: none;
+    position: absolute;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label{
+    opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+    opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+    width: 49%;
+    text-align: left;
+    left: 0;
+}
+
+.carousel-controls .next-slide {
+    width: 49%;
+    text-align: right;
+    right: 0;
+}
+
+.carousel-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 999;
+    text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    margin: 10px;
+}
+
+input:checked + .slide-container .slide-image {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .carousel-controls label {
+     display: block; 
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+	opacity: 1;
+}
+input:checked + .slide-container .nav label { display: block; }
+
+/* End Carousel */
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+     margin-top: 25px;
+
+}
+
+/* This container is needed to position the front Card*/
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  }
+
+/* Centered text */
+.centeredTextOnImage {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Top {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.TopNews {
+   display: grid;
+   place-items: center;
+   margin-top: 25px;
+}
+
+	</style>
+<div id="main">
+<header>
+<grid-container>
+  <grid-item>
+<span style="font-size:30px;cursor:pointer;padding-right: 300px;" onclick="openNav()">&#9776; </span>
+  </grid-item>
+    <grid-item>
+<a>#EndGame</a>
+  </grid-item>
+  <grid-item>
+  <form action="/search.html">
+      <input type="text" placeholder="Search.." name="search">
+          </form>
+</grid-item>
+  </grid-container>
+  </header>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="./Home.html">Home</a>
+  <a href="./Console.html">Console</a>
+  <a href="./TopGames.html">Top Games</a>
+ </div>
+
+<div name="carousel">
+  <div class="carousel">
+    <ul class="slides">
+      <input type="radio" name="radio-buttons" id="img-1" checked />
+      <li class="slide-container">
+        <div class="slide-image">
+          <img src="https://www.techfu.fr/wp-content/uploads/e3-2021.jpg">
+	          <div class="Top"><bold style="font-size: 30px;">June 21</bold></div>
+        </div>
+        <div class="carousel-controls">
+          <label for="img-3" class="prev-slide">
+            <span>&lsaquo;</span>
+          </label>
+          <label for="img-2" class="next-slide">
+            <span>&rsaquo;</span>
+          </label>
+        </div>
+      </li>
+      <input type="radio" name="radio-buttons" id="img-2" />
+      <li class="slide-container">
+        <div class="slide-image">
+          <img src="https://image.jeuxvideo.com/medias-md/159913/1599126910-6139-card.jpg">
+	          <div class="Top"><bold style="font-size: 30px;">08/25/21</bold></div>
+        </div>
+        <div class="carousel-controls">
+          <label for="img-1" class="prev-slide">
+            <span>&lsaquo;</span>
+          </label>
+          <label for="img-3" class="next-slide">
+            <span>&rsaquo;</span>
+          </label>
+        </div>
+      </li>
+      <input type="radio" name="radio-buttons" id="img-3" />
+      <li class="slide-container">
+        <div class="slide-image">
+          <img src="https://images.blz-contentstack.com/v3/assets/blt89bc43d388ab63bf/blt07cb3be8f177e8e1/5f68ec7c1e50bb14a0ec728e/blizzcon-social.png">
+	          	          <div class="Top"><bold style="font-size: 30px;">02/19/21</bold></div>
+
+        </div>
+        <div class="carousel-controls">
+          <label for="img-2" class="prev-slide">
+            <span>&lsaquo;</span>
+          </label>
+          <label for="img-1" class="next-slide">
+            <span>&rsaquo;</span>
+          </label>
+        </div>
+      </li>
+      <div class="carousel-dots">
+        <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+        <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+        <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+      </div>
+    </ul>
+  </div>
+</div>
+
+<div class="TopNews">Top</div>
+
+<div>
+	<grid-container>
+		<grid-item>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+	    <a href="https://www.w3schools.com">
+      <img id=twoIMG src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR7h2bNl7nBw6bXZ2SA2m0MMHVTzrQemOkkwA&usqp=CAU" alt="No Find" style="width:300px;height:300px;">
+	      </a>
+	        <div class="centeredTextOnImage" style="color: White;">Zelda</div>
+    </div>
+     </div>
+</div> 
+  </grid-item>
+<grid-item>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+	    <a href="https://www.w3schools.com">
+      <img id=twoIMG src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Mario_emblem.svg/1024px-Mario_emblem.svg.png" alt="No Find" style="width:300px;height:300px;">
+	      </a>
+	        <div class="centeredTextOnImage">Mario</div>
+    </div>
+     </div>
+</div> 
+  </grid-item>
+<grid-item>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+	    <a href="https://www.w3schools.com">
+      <img id=twoIMG src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Pacman.svg/1200px-Pacman.svg.png" alt="No Find" style="width:300px;height:300px;">
+	      </a>
+	        <div class="centeredTextOnImage">Pacman</div>
+    </div>
+     </div>
+</div> 
+  </grid-item>
+</grid-container>
+</div>
+<div class="TopNews" style="margin-top: 350px;"><bold style="font-size: 30px;">What Game You Want Search</bold></div>
+
+<div class="TopNews">
+<form action="/search.html">
+      <input type="text" placeholder="Search.." name="search" style="width: 800px;">
+          </form>
+</div>
+
+ <footer style="margin-top: 80px;">
+	   <grid-container>
+<grid-item>
+  <p>Author: © <a href="https://github.com/3Samourai/End-Game">3Samourai</a></p>
+  </grid-item>
+  <grid-item name="Network Link">
+  
+  </grid-item>
+  <grid-item>
+  <p>Image, Reviews and Description are provided by <a href="https://opencritic.com/">OpenCritic</a></p>
+  </grid-item>
+  </grid-container>
+
+</footer> 
+    </div>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+} 
+
+/*Code of 3Samourai*/
+	
+	/*SmartPhone Alert*/
+	if(window.innerHeight > window.innerWidth){
+    alert("Please use Landscape!");
+}
+
+</script>
+</body>
+</html>
