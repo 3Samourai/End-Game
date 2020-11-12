@@ -2,7 +2,7 @@
 ## ![](https://img.shields.io/github/last-commit/3Samourai/End-Game)
 Find Information About all New and Old Games
 
-![WebSite](https://3samourai.github.io/End-Game/)
+[WebSite](https://3samourai.github.io/End-Game/)
 
 # Credit
 3Samourai
