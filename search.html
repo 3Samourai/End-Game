@@ -455,7 +455,7 @@ Newrequest.send();
 Newrequest.onload = function() {
   var Newvalue = Newrequest.response;
   var IMGData = "https:"+ Newvalue.bannerScreenshot.fullRes;
-var regex = /([\.\?\!\:\,])/;
+var regex = /([\.\?\!])/;
 var regexOfDate = /([T])/;
 var match = Newvalue.description.match(regex);
 var index = match.index;
