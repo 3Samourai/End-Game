@@ -7,7 +7,7 @@
 -->
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://via.placeholder.com/200x200.png?text=LOGO" alt="Project logo"></a>
+ <img width=64px height=64px src="https://raw.githubusercontent.com/3Samourai/End-Game/main/favicon.ico" alt="Project logo"></a>
 </p>
 
 <h3 align="center">End-Game</h3>
@@ -22,13 +22,7 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-      <a href="#about">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
+    <li><a href="#about">About</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#built_using">Built Using</a></li>
     <li><a href="#authors">Authors</a></li>
