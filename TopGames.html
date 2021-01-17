@@ -1,55 +1,179 @@
-<html>
+<html lang="en-US">
 <head>
-	<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&amp;display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <link rel="canonical" href="https://3samourai.github.io/End-Game/search?search=mario">
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-	<title>End Game - Top Games</title>
-	<meta name="Description" content="Find Most Played Games">
-	<meta name="keywords" content="Games, FlashCard, Steam, Video Games, Nintendo Switch, PS5, Xbox, Fortnite, Cyberpunk">
-	<meta name="apple-mobile-web-app-title" content="End Game - TopGames">
-	<meta name="application-name" content="End Game - TopGames">
-	</head>
+  <title>Top Games - End Game</title>
+  <meta name="description" content="Most Searched Games">
+	<meta name="keywords" content="Games, FlashCard, Steam, Video Games, GOG, PS5, Xbox, Fortnite, video games for xbox one, video games for ps4, video games for ps4">
+	<meta name="apple-mobile-web-app-title" content="End Game">
+	<meta name="application-name" content="End Game">
+	<meta id="page-meta-twitter:title" name="twitter:title" property="twitter:title" content="#EndGame">
+	<meta id="page-meta-twitter:description" name="twitter:description" property="twitter:description" content="Find Information About all New and Old Games">
+		</head>
 <body>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"> 
 <style>
-	
-body {
+    body {
 	font-family: 'Poppins', sans-serif;
 }
 
-p {
-	font-size: 15px;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 0.2fr 4fr 1fr;
+  gap: 10px 10px;
+  grid-template-areas:
+    "Header Header Header Header"
+    "body body body body"
+    "footer footer footer footer";
 }
 
-.editor {
-	font-size: 9px;
-}
-	
- input[type=text] {
-  padding: 6px;
-  margin-top: 6px;
-  font-size: 17px;
-  border: none;
+.Header { 
+	grid-area: Header; 
+	background-color: red;
 }
 
-button {
-  float: right;
-   margin-top: 6px;
-  margin-right: 16px;
-  background: #ddd;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
+.body { 
+    grid-area: body; 
+    margin-bottom: 170px;
 }
 
- button:hover {
-  background: #ccc;
+.footer { 
+  grid-area: footer; 
+  background-color: red;
+  padding: 0.7fr;
+
+  }
+
+@media screen and (max-width: 950px) {
+.grid-container {
+       grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+    "Header"
+    "body"
+    "footer";
+  }
 }
 
-footer {
-	 z-index: 1;
-  background-color: #EC524B;
-  padding-bottom: 30px;
+/*Start header*/
+.gridHeader {
+	  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 10px 10px;
+  grid-template-areas:
+    "Menu Logo Search";
+    text-align: center; 
 
+}
+
+.menu { grid-area: Menu; }
+.logo { grid-area: Logo; }
+.search { grid-area: Search; }
+
+@media screen and (max-width: 500px) {
+ .gridHeader {
+       grid-template-columns: 1fr;
+      grid-template-areas:
+    "Logo"
+    "Menu"
+    "Search";
+  }
+}
+/*End Header*/
+/*Start Body*/
+.gridBody {
+	  display: grid;
+       grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Tile";
+    text-align: center; 
+
+}
+.tile { grid-area: Tile; }
+/*End Body*/
+
+/*Start Footer*/
+.gridFooter {
+	  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "User Logo Credit";
+    text-align: center; 
+
+}
+.user { grid-area: User; }
+.credit { grid-area: Credit; }
+
+@media screen and (max-width: 500px) {
+ .gridFooter {
+       grid-template-columns: 1fr;
+      grid-template-areas:
+    "User"
+    "Logo"
+    "Credit";
+  }
+}
+/*End Footer*/
+.center {
+   display: grid;
+   place-items: center;
+}
+/*Start Tile*/
+
+.gridTile {
+	  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 200px 200px;
+  text-align: center; 
+  place-items: center;
+
+  grid-template-areas:
+    "Tile1 Tile2 Tile3"
+    "Tile4 Tile5 Tile6"
+    "Tile7 Tile8 Tile9";
+}
+.tile1 { grid-area: Tile1; }
+.tile2 { grid-area: Tile2; }
+.tile3 { grid-area: Tile3; }
+.tile4 { grid-area: Tile4; }
+.tile5 { grid-area: Tile5; }
+.tile6 { grid-area: Tile6; }
+.tile7 { grid-area: Tile7; }
+.tile8 { grid-area: Tile8; }
+.tile9 { grid-area: Tile9; }
+
+@media screen and (max-width: 950px) {
+ .gridtile {
+       grid-template-columns: 1fr;
+       grid-template-rows: 1fr;
+      grid-template-areas:
+    "Tile1"
+    "Tile2"
+    "Tile3"
+    "Tile4"
+    "Tile5"
+    "Tile6"
+    "Tile7" 
+    "Tile8"
+    "Tile9";
+  }
+}
+
+/*End Tile*/
+/*Start Menu*/
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
 
 .sidenav {
@@ -85,41 +209,22 @@ footer {
   font-size: 36px;
   margin-left: 50px;
 }
+/*End Menu*/
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-#box {
-  height:200px;
-  width: 240px;
-  display: grid;
-   place-items: center;
-    background-color: #8c8c8c;
-    
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-rows: 45px;
-  grid-gap: 10px;
-}
-
-grid-item {
-  margin: auto;
-}
-
-
-header {
-background-color: #EC524B
-}
- /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
   width: 300px;
   height: 200px;
-  border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -158,219 +263,183 @@ background-color: #2980b9;
   transform: rotateY(180deg);
 } 
 </style>
-<div id="main">
-<header>
-<grid-container>
-  <grid-item>
-<span style="font-size:30px;cursor:pointer;padding-right: 300px;" onclick="openNav()">&#9776; </span>
-  </grid-item>
-    <grid-item>
-<a>#EndGame</a>
-  </grid-item>
-  <grid-item>
-  <form action="/End-Game/search.html">
-      <input type="text" placeholder="Search.." name="search">
-          </form>
-</grid-item>
-  </grid-container>
-  </header>
-<grid-container id="mainContainer" style="margin-top: 27.5px;">
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="./index.html">Home</a>
-  <a href="./Console.html">Console</a>
-  <a href="./TopGames.html">Top Games</a>
+<div class="grid-container">
+    <div class="Header">
+        <header class="gridHeader">
+            <a class="menu"><span onclick="openNav()" style="font-size: 20px;" class="unselectable">&#9776; Menu </span>
+        </a>
+            <a class="logo" href="https://3samourai.github.io/End-Game/">#End-Game</a>
+            <form class="search" action="/End-Game/search.html">
+          <input style="width: 150px;"
+          type="text" placeholder="Search.." name="search">
+              </form>
+      </header>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="./index.html">Home</a>
+        <a href="./Console.html">Console</a>
+        <a href="./TopGames.html">Top Games</a>
+       </div>
+    </div>
+    <div class="body">
+        <div class="gridBody">
+            <div class="tile">
+                <h1 class="center"><bold>Most Searched Games:</bold></h1>
+                <hr class="rounded"/>
+          <div class="gridTile "> 
+            <div class="flip-card tile1">
+                <div class="flip-card-inner roundedImage">
+                  <div class="flip-card-front">
+                    <img id=oneIMG alt="Loading" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back" id="oneText">
+                 <h1 style="font-size: 25px;">Loading</h1>
+                    <p>2013r</p>
+                    <p>5/5</p>
+                    <p>Descrption:</p>
+                    <p></p>
+                    <p>editor</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card tile2">
+                <div class="flip-card-inner roundedImage">
+                  <div class="flip-card-front">
+                    <img id=twoIMG alt="Loading" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back" id="twoText">
+                 <h1 style="font-size: 25px;">Loading</h1>
+                    <p>2013r</p>
+                    <p>5/5</p>
+                    <p>Descrption:</p>
+                    <p></p>
+                    <p>editor</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card tile3">
+                <div class="flip-card-inner roundedImage">
+                  <div class="flip-card-front">
+                    <img id=treeIMG alt="Loading" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back" id="treeText">
+                 <h1 style="font-size: 25px;">Loading</h1>
+                    <p>2013r</p>
+                    <p>5/5</p>
+                    <p>Descrption:</p>
+                    <p></p>
+                    <p>editor</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card tile4">
+                <div class="flip-card-inner roundedImage">
+                  <div class="flip-card-front">
+                    <img id=fourIMG alt="Loading" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back" id="fourText">
+                 <h1 style="font-size: 25px;">Loading</h1>
+                    <p>2013r</p>
+                    <p>5/5</p>
+                    <p>Descrption:</p>
+                    <p></p>
+                    <p>editor</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card tile5">
+                <div class="flip-card-inner roundedImage">
+                  <div class="flip-card-front">
+                    <img id=fiveIMG alt="Loading" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back" id="fiveText">
+                 <h1 style="font-size: 25px;">Loading</h1>
+                    <p>2013r</p>
+                    <p>5/5</p>
+                    <p>Descrption:</p>
+                    <p></p>
+                    <p>editor</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card tile6">
+                <div class="flip-card-inner roundedImage">
+                  <div class="flip-card-front">
+                    <img id=sixIMG alt="Loading" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back" id="sixText">
+                 <h1 style="font-size: 25px;">Loading</h1>
+                    <p>2013r</p>
+                    <p>5/5</p>
+                    <p>Descrption:</p>
+                    <p></p>
+                    <p>editor</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card tile7">
+                <div class="flip-card-inner roundedImage">
+                  <div class="flip-card-front">
+                    <img id=sevenIMG alt="Loading" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back" id="sevenText">
+                 <h1 style="font-size: 25px;">Loading</h1>
+                    <p>2013r</p>
+                    <p>5/5</p>
+                    <p>Descrption:</p>
+                    <p></p>
+                    <p>editor</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card tile8">
+                <div class="flip-card-inner roundedImage">
+                  <div class="flip-card-front">
+                    <img id=eightIMG alt="Loading" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back" id="eightText">
+                 <h1 style="font-size: 25px;">Loading</h1>
+                    <p>2013r</p>
+                    <p>5/5</p>
+                    <p>Descrption:</p>
+                    <p></p>
+                    <p>editor</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card tile9">
+                <div class="flip-card-inner roundedImage">
+                  <div class="flip-card-front">
+                    <img id=nineIMG alt="Loading" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back" id="nineText">
+                 <h1 style="font-size: 25px;">Loading</h1>
+                    <p>2013r</p>
+                    <p>5/5</p>
+                    <p>Descrption:</p>
+                    <p></p>
+                    <p>editor</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            </div>
+            
+            </div>
+         
+            </div>
+            <div class="footer">
+                <footer class="gridFooter">
+                     <a class="user" href="https://github.com/3Samourai/">Create by 3Samourai</a>
+                     <a href="https://github.com/3Samourai/End-Game/" class="logo" style="
+              background: rgba(255,255,255,0);"><img src="https://raw.githubusercontent.com/3Samourai/End-Game/main/GitHub-Mark-64px.png" alt="Github" style="
+              padding-top: 5px;"/></a>
+                    <a class="credit" href="https://opencritic.com/">Image, Reviews and Description are provided by OpenCritic.</a>
+            </div>
 </div>
-  <grid-item>
- <div class="flip-card">
-  <div class="flip-card-inner roundedImage">
-    <div class="flip-card-front">
-      <img id=oneIMG alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    <div class="flip-card-back" id="oneText">
-   <h1 style="font-size: 25px;">PS4</h1>
-      <p>2013r</p>
-      <p>5/5</p>
-      <p>Descrption:</p>
-      <p></p>
-      <p>editor</p>
-    </div>
-  </div>
-</div>
-  </grid-item> 
-    <grid-item>
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img id=twoIMG alt="No Find" style="width:300px;height:300px;">
-    </div>
-    <div class="flip-card-back" id="twoText">
-       <h1 style="font-size: 25px;">PS4</h1>
-      <p>2013r</p>
-      <p>5/5</p>
-      <p>Descrption:</p>
-      <p style="font-size: 12px;"></p>
-            <p>editor</p>
-
-    </div>
-  </div>
-</div> 
-  </grid-item>
-  <grid-item>
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img  id=treeIMG alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    <div class="flip-card-back" id="treeText">
-       <h1 style="font-size: 25px;">PS4</h1>
-      <p>2013r</p>
-      <p>5/5</p>
-      <p>Descrption:</p>
-      <p style="font-size: 12px;"></p>
-            <p>editor</p>
-
-    </div>
-  </div>
-</div> 
-  </grid-item>
-<grid-item style="margin-top: 300px;">
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img id=fourIMG alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    <div class="flip-card-back" id="fourText">
-       <h1 style="font-size: 25px;">PS4</h1>
-      <p>2013r</p>
-      <p>5/5</p>
-      <p>Descrption:</p>
-      <p style="font-size: 12px;"></p>
-            <p>editor</p>
-
-    </div>
-  </div>
-</div> 
-  </grid-item>
-  <grid-item style="margin-top: 300px;">
- <div class="flip-card">
-  <div class="flip-card-inner roundedImage">
-    <div class="flip-card-front">
-      <img id=fiveIMG alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    <div class="flip-card-back" id="fiveText">
-      <h1 style="font-size: 25px;">PS4</h1>
-      <p>2013r</p>
-      <p>5/5</p>
-      <p>Descrption:</p>
-      <p style="font-size: 12px;"></p>
-            <p>editor</p>
-
-    </div>
-  </div>
-</div>
-  </grid-item> 
-    <grid-item style="margin-top: 300px;" >
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img id=sixIMG alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    <div class="flip-card-back" id="sixText">
-       <h1 style="font-size: 25px;">PS4</h1>
-      <p>2013r</p>
-      <p>5/5</p>
-      <p>Descrption:</p>
-      <p style="font-size: 12px;"></p>
-            <p>editor</p>
-
-    </div>
-  </div>
-</div> 
-  </grid-item>
-  <grid-item  style="margin-top: 600px;">
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img id=sevenIMG alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    <div class="flip-card-back" id="sevenText">
-       <h1 style="font-size: 25px;">PS4</h1>
-      <p>2013r</p>
-      <p>5/5</p>
-      <p>Descrption:</p>
-      <p style="font-size: 12px;"></p>
-            <p>editor</p>
-
-    </div>
-  </div>
-</div> 
-  </grid-item>
-<grid-item  style="margin-top: 600px;">
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img id=eightIMG alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    <div class="flip-card-back" id="eightText">
-       <h1 style="font-size: 25px;">PS4</h1>
-      <p>2013r</p>
-      <p>5/5</p>
-      <p>Descrption:</p>
-      <p style="font-size: 12px;"></p>
-            <p>editor</p>
-
-    </div>
-  </div>
-</div> 
-  </grid-item>
-<grid-item  style="margin-top: 600px;">
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img id=nineIMG alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    <div class="flip-card-back" id="nineText">
-       <h1>PS4</h1>
-      <p>2013r</p>
-      <p>5/5</p>
-      <p>Descrption:</p>
-      <p></p>
-            <p>editor</p>
-
-    </div>
-  </div>
-</div> 
-  </grid-item>
-
-  </grid-container>
- <footer style="margin-top: 900px;">
-	   <grid-container>
-<grid-item>
-  <p>Author: © <a href="https://github.com/3Samourai/End-Game">3Samourai</a></p>
-  </grid-item>
-  <grid-item name="Network Link">
-  <a href="https://github.com/3Samourai/End-Game/" style="
-    background: rgba(255,255,255,0);"><img src="https://raw.githubusercontent.com/3Samourai/End-Game/main/GitHub-Mark-64px.png" alt="Github" style="
-    padding-top: 5px;"/></a>
-  </grid-item>
-  <grid-item>
-  <p>Image, Reviews and Description are provided by <a href="https://opencritic.com/">OpenCritic</a></p>
-  </grid-item>
-  </grid-container>
-
-</footer> 
-    </div>
-    
 <script>
-	
-	/*SmartPhone Alert*/
-	if(window.innerHeight > window.innerWidth){
-    alert("Please use Landscape!");
-}
-
-	
-	/*Start of IMG Element*/
+    /*Start of IMG Element*/
 	var  oneIMG = document.getElementById("oneIMG")
 	var  twoIMG = document.getElementById("twoIMG")
 	var  treeIMG = document.getElementById("treeIMG")
@@ -429,6 +498,7 @@ request.onload = function() {
  }); 
  p2.then((P2value) => {
       value.forEach(function(item){
+	      
 	  var urlAPI = "https://api.opencritic.com/api/game/"+ P2value[count].id;
 	  count += 1;
 var Newrequest = new XMLHttpRequest();
@@ -438,7 +508,7 @@ Newrequest.send();
 Newrequest.onload = function() {
   var Newvalue = Newrequest.response;
   var IMGData = "https:"+ Newvalue.bannerScreenshot.fullRes;
-var regex = /([\.\?\!\:\,])/;
+var regex = /([\.\?\!\,])/;
 var regexOfDate = /([T])/;
 var match = Newvalue.description.match(regex);
 var index = match.index;
@@ -447,57 +517,59 @@ var editor = Newvalue.Companies[0].name;
 var matchOfDate = Newvalue.firstReleaseDate.match(regexOfDate);
 var indexOfDate = matchOfDate.index;
 var date = Newvalue.firstReleaseDate.slice(0,10);
+
+
   if (oneIMG.src === "")
   {
 	  oneIMG.src = IMGData;
-  oneChild[0].outerHTML = "<h1>"+ Newvalue.name +"</h1>";
-  oneChild[1].outerHTML = "<p style=\"font-size: 9px;\">"+ "Release Date: " + date + "</p>";
-  oneChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
-  oneChild[4].outerHTML = "<p style=\"font-size: 9px;\">"+ description + "</p>";
-  oneChild[5].outerHTML = "<p>"+"Editor: " + editor + "</p>";
+  oneChild[0].outerHTML = "<h1 style=\"font-size: 20px;\">"+ Newvalue.name +"</h1>";
+  oneChild[1].outerHTML = "<p style=\"font-size: 12px;\">"+ "Release Date: " + date + "</p>";
+  oneChild[2].outerHTML = "<p style=\"font-size: 12px;\">"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
+  oneChild[4].outerHTML = "<p style=\"font-size: 15px;\">"+ description + "</p>";
+  oneChild[5].outerHTML = "<p style=\"font-size: 12px;\">"+"Editor: " + editor + "</p>";
 
   
   }
   else if (twoIMG.src === "")
   {
   twoIMG.src = IMGData;
-   twoChild[0].outerHTML = "<h1>"+ Newvalue.name +"</h1>";
-   twoChild[1].outerHTML = "<p style=\"font-size: 9px;\">"+ "Release Date: " + date + "</p>";
-  twoChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
-   twoChild[4].outerHTML = "<p style=\"font-size: 9px;\">"+ description + "</p>";
-twoChild[5].outerHTML = "<p>"+"Editor: " + editor + "</p>";
+   twoChild[0].outerHTML = "<h1 style=\"font-size: 20px;\">"+ Newvalue.name +"</h1>";
+   twoChild[1].outerHTML = "<p style=\"font-size: 12px;\">"+ "Release Date: " + date + "</p>";
+  twoChild[2].outerHTML = "<p style=\"font-size: 12px;\">"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
+   twoChild[4].outerHTML = "<p style=\"font-size: 15px;\">"+ description + "</p>";
+twoChild[5].outerHTML = "<p style=\"font-size: 12px;\">"+"Editor: " + editor + "</p>";
 
 
   }
    else if (treeIMG.src === "")
   {
   treeIMG.src = IMGData;
-  treeChild[0].outerHTML = "<h1>"+ Newvalue.name +"</h1>";
-  treeChild[1].outerHTML = "<p style=\"font-size: 9px;\">"+ "Release Date: " + date + "</p>";
-  treeChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
-  treeChild[4].outerHTML = "<p style=\"font-size: 9px;\">"+ description + "</p>";
-treeChild[5].outerHTML = "<p>"+"Editor: " + editor + "</p>";
+  treeChild[0].outerHTML = "<h1 style=\"font-size: 20px;\">"+ Newvalue.name +"</h1>";
+  treeChild[1].outerHTML = "<p style=\"font-size: 12px;\">"+ "Release Date: " + date + "</p>";
+  treeChild[2].outerHTML = "<p style=\"font-size: 12px;\">"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
+  treeChild[4].outerHTML = "<p style=\"font-size: 15px;\">"+ description + "</p>";
+treeChild[5].outerHTML = "<p style=\"font-size: 12px;\">"+"Editor: " + editor + "</p>";
 
 
   }
    else if (fourIMG.src === "")
   {
   fourIMG.src = IMGData;
-  fourChild[0].outerHTML = "<h1>"+ Newvalue.name +"</h1>";
-  fourChild[1].outerHTML = "<p style=\"font-size: 9px;\">"+ "Release Date: " + date + "</p>";
-  fourChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
-  fourChild[4].outerHTML = "<p style=\"font-size: 9px;\">"+ description + "</p>";
-fourChild[5].outerHTML = "<p>"+"Editor: " + editor + "</p>";
+  fourChild[0].outerHTML = "<h1 style=\"font-size: 20px;\">"+ Newvalue.name +"</h1>";
+  fourChild[1].outerHTML = "<p style=\"font-size: 12px;\">"+ "Release Date: " + date + "</p>";
+  fourChild[2].outerHTML = "<p style=\"font-size: 12px;\">"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
+  fourChild[4].outerHTML = "<p style=\"font-size: 15px;\">"+ description + "</p>";
+fourChild[5].outerHTML = "<p style=\"font-size: 12px;\">"+"Editor: " + editor + "</p>";
 
 
   }
    else if (fiveIMG.src === "")
   {
   fiveIMG.src = IMGData;
-  fiveChild[0].outerHTML = "<h1>"+ Newvalue.name +"</h1>";
-  fiveChild[1].outerHTML = "<p style=\"font-size: 9px;\">"+ "Release Date: " + date + "</p>";
+  fiveChild[0].outerHTML = "<h1 style=\"font-size: 20px;\">"+ Newvalue.name +"</h1>";
+  fiveChild[1].outerHTML = "<p>"+ "Release Date: " + date + "</p>";
   fiveChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
-  fiveChild[4].outerHTML = "<p style=\"font-size: 9px;\">"+ description + "</p>";
+  fiveChild[4].outerHTML = "<p style=\"font-size: 15px;\">"+ description + "</p>";
 fiveChild[5].outerHTML = "<p>"+"Editor: " + editor + "</p>";
 
 
@@ -505,52 +577,48 @@ fiveChild[5].outerHTML = "<p>"+"Editor: " + editor + "</p>";
    else if (sixIMG.src === "")
   {
   sixIMG.src = IMGData;
-  sixChild[0].outerHTML = "<h1>"+ Newvalue.name +"</h1>";
-  sixChild[1].outerHTML = "<p style=\"font-size: 9px;\">"+ "Release Date: " + date + "</p>";
-  sixChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
-  sixChild[4].outerHTML = "<p style=\"font-size: 9px;\">"+ description + "</p>";
-sixChild[5].outerHTML = "<p>"+"Editor: " + editor + "</p>";
+  sixChild[0].outerHTML = "<h1 style=\"font-size: 20px;\">"+ Newvalue.name +"</h1>";
+  sixChild[1].outerHTML = "<p style=\"font-size: 12px;\">"+ "Release Date: " + date + "</p>";
+  sixChild[2].outerHTML = "<p style=\"font-size: 12px;\">"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
+  sixChild[4].outerHTML = "<p style=\"font-size: 15px;\">"+ description + "</p>";
+sixChild[5].outerHTML = "<p style=\"font-size: 12px;\">"+"Editor: " + editor + "</p>";
 
 
   }
    else if (sevenIMG.src === "")
   {
   sevenIMG.src = IMGData;
-  sevenChild[0].outerHTML = "<h1>"+ Newvalue.name +"</h1>";
-  sevenChild[1].outerHTML = "<p style=\"font-size: 9px;\">"+ "Release Date: " + date + "</p>";
-  sevenChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
-  sevenChild[4].outerHTML = "<p style=\"font-size: 9px;\">"+ description + "</p>";
-sevenChild[5].outerHTML = "<p>"+"Editor: " + editor + "</p>";
+  sevenChild[0].outerHTML = "<h1 style=\"font-size: 20px;\">"+ Newvalue.name +"</h1>";
+  sevenChild[1].outerHTML = "<p style=\"font-size: 12px;\">"+ "Release Date: " + date + "</p>";
+  sevenChild[2].outerHTML = "<p style=\"font-size: 12px;\">"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
+  sevenChild[4].outerHTML = "<p style=\"font-size: 15px;\">"+ description + "</p>";
+sevenChild[5].outerHTML = "<p style=\"font-size: 12px;\">"+"Editor: " + editor + "</p>";
 
 
   }
    else if (eightIMG.src === "")
   {
   eightIMG.src = IMGData;
-  eightChild[0].outerHTML = "<h1>"+ Newvalue.name +"</h1>";
-  eightChild[1].outerHTML = "<p style=\"font-size: 9px;\">"+ "Release Date: " + date + "</p>";
-  eightChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
-  eightChild[4].outerHTML = "<p style=\"font-size: 9px;\">"+ description + "</p>";
-eightChild[5].outerHTML = "<p>"+"Editor: " + editor + "</p>";
+  eightChild[0].outerHTML = "<h1 style=\"font-size: 20px;\">"+ Newvalue.name +"</h1>";
+  eightChild[1].outerHTML = "<p style=\"font-size: 12px;\">"+ "Release Date: " + date + "</p>";
+  eightChild[2].outerHTML = "<p style=\"font-size: 12px;\">"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
+  eightChild[4].outerHTML = "<p style=\"font-size: 15px;\">"+ description + "</p>";
+eightChild[5].outerHTML = "<p style=\"font-size: 12px;\">"+"Editor: " + editor + "</p>";
 
 
   }
      else if (nineIMG.src === "")
   {
   nineIMG.src = IMGData;
-  nineChild[0].outerHTML = "<h1>"+ Newvalue.name +"</h1>";
-  nineChild[1].outerHTML = "<p style=\"font-size: 9px;\">"+ "Release Date: " + date + "</p>";
-  nineChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
-  nineChild[4].outerHTML = "<p style=\"font-size: 9px;\">"+ description + "</p>";
-nineChild[5].outerHTML = "<p>"+"Editor: " + editor + "</p>";
+  nineChild[0].outerHTML = "<h1 style=\"font-size: 20px;\">"+ Newvalue.name +"</h1>";
+  nineChild[1].outerHTML = "<p style=\"font-size: 12px;\">"+ "Release Date: " + date + "</p>";
+  nineChild[2].outerHTML = "<p style=\"font-size: 12px;\">"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
+  nineChild[4].outerHTML = "<p style=\"font-size: 15px;\">"+ description + "</p>";
+nineChild[5].outerHTML = "<p style=\"font-size: 12px;\">"+"Editor: " + editor + "</p>";
 
 
   };
-/*Code of 3Samourai*/
-
-  
-}})});
-
+}});
+    });
 </script>
 </body>
-</html>
