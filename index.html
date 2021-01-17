@@ -1,71 +1,192 @@
 <html lang="en-US">
 <head>
-	<meta charset="UTF-8">
-	<title>End Game - Game Finder</title>
-	<meta name="description" content="Find Information About all New and Old Games">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&amp;display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <link rel="canonical" href="https://3samourai.github.io/End-Game/">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <title>Game Finder: End Game</title>
+  <meta name="description" content="Find Information About all New and Old Games">
 	<meta name="keywords" content="Games, FlashCard, Steam, Video Games, GOG, PS5, Xbox, Fortnite, video games for xbox one, video games for ps4, video games for ps4">
 	<meta name="apple-mobile-web-app-title" content="End Game">
 	<meta name="application-name" content="End Game">
 	<meta name="google-site-verification" content="1u_g1cG-B9VNASDMyJC4fxvvacjHmabK_TaCzDFydlw" />
 	<meta id="page-meta-twitter:title" name="twitter:title" property="twitter:title" content="#EndGame">
 	<meta id="page-meta-twitter:description" name="twitter:description" property="twitter:description" content="Find Information About all New and Old Games">
-        <meta name="viewport" content="width=device-width, initial-scale=0">
-	<link rel="canonical" href="https://3samourai.github.io/End-Game/">
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-	</head>
+		</head>
 <body>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"> 
 <style>
-	body {
+body {
 	font-family: 'Poppins', sans-serif;
 }
 
-p {
-	font-size: 15px;
-}
-	
- input[type=text] {
-  padding: 6px;
-  margin-top: 6px;
-  font-size: 17px;
-  border: none;
-}
-
-button {
-  float: right;
-   margin-top: 6px;
-  margin-right: 16px;
-  background: #ddd;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
-}
-
- button:hover {
-  background: #ccc;
-}
-
-footer {
-	 z-index: 1;
-  background-color: #EC524B;
-  padding-bottom: 30px;
-
-}
-
-
-	header {
-background-color: #EC524B
-}
-grid-container {
+.grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-rows: 45px;
-  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 0.2fr 4fr 1fr;
+  gap: 10px 10px;
+  grid-template-areas:
+    "Header Header Header Header"
+    "body body body body"
+    "footer footer footer footer";
 }
 
-grid-item {
-  margin: auto;
+.Header { 
+	grid-area: Header; 
+	background-color: red;
 }
+
+.body { grid-area: body; }
+
+.footer { 
+  grid-area: footer; 
+  background-color: red;
+
+  }
+
+
+@media screen and (max-width: 500px) {
+.grid-container {
+       grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+    "Header"
+    "body"
+    "footer";
+  }
+}
+
+/*Start header*/
+.gridHeader {
+	  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 10px 10px;
+  grid-template-areas:
+    "Menu Logo Search";
+    text-align: center; 
+
+}
+
+.menu { grid-area: Menu; }
+.logo { grid-area: Logo; }
+.search { grid-area: Search; }
+
+@media screen and (max-width: 500px) {
+ .gridHeader {
+       grid-template-columns: 1fr;
+      grid-template-areas:
+    "Logo"
+    "Menu"
+    "Search";
+  }
+}
+/*End Header*/
+
+/*Start Body*/
+.gridBody {
+	  display: grid;
+       grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Search"
+    "Tile"
+    "Description";
+    text-align: center; 
+
+}
+.tile { grid-area: Tile; }
+.description { grid-area: Description; }
+/*End Body*/
+
+/*Start Footer*/
+.gridFooter {
+	  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "User Logo Credit";
+    text-align: center; 
+
+}
+.user { grid-area: User; }
+.credit { grid-area: Credit; }
+
+@media screen and (max-width: 500px) {
+ .gridFooter {
+       grid-template-columns: 1fr;
+      grid-template-areas:
+    "User"
+    "Logo"
+    "Credit";
+  }
+}
+/*End Footer*/
+
+.center {
+   display: grid;
+   place-items: center;
+}
+
+/*Start Tile*/
+
+.gridTile {
+	  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 10px 10px;
+  grid-template-areas:
+    "Tile1 Tile2 Tile3";
+}
+.tile1 { grid-area: Tile1; }
+.tile2 { grid-area: Tile2; }
+.tile3 { grid-area: Tile3; }
+
+@media screen and (max-width: 800px) {
+ .gridtile {
+       grid-template-columns: 1fr;
+      grid-template-areas:
+    "Tile1"
+    "Tile2"
+    "Tile3";
+  }
+}
+/*End Tile*/
+
+hr.rounded {
+  border-top: 8px solid rgb(255, 0, 0);
+  border-radius: 5px;
+  color: aqua;
+}
+input {
+  width: 500px;
+}
+@media only screen and (max-device-width: 800px)
+    { 
+        input[type=text]{
+            width: 300px;
+
+    }
+}
+bold {
+            font-size: 30px;
+
+    }
+.css-input {
+     padding: 5px;
+     font-size: 24px;
+     border-width: 1px;
+     border-color: #CCCCCC;
+     background-color: #ff0000;
+     color: #000000;
+     border-style: solid;
+     border-radius: 0px;
+     box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+    }
+
+/*Start Menu*/
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -104,343 +225,109 @@ grid-item {
   font-size: 36px;
   margin-left: 50px;
 }
+/*End Menu*/
 
-
-/* Start Carousel */
-
-.carousel {
-   
-}
-
-ul.slides {
-    display: block;
-    position: relative;
-    height: 600px;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    list-style: none;
-}
-
-.slides * {
-    user-select: none;
-    -ms-user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
+.unselectable {
     -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-ul.slides input {
-    display: none; 
-}
-
-
-.slide-container { 
-    display: block; 
-}
-
-.slide-image {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    opacity: 0;
-    transition: all .7s ease-in-out;
-}   
-
-.slide-image img {
-    width: auto;
-    min-width: 100%;
-    height: 100%;
-}
-
-.carousel-controls {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    font-size: 100px;
-    line-height: 600px;
-    color: #fff;
-}
-
-.carousel-controls label {
-    display: none;
-    position: absolute;
-    padding: 0 20px;
-    opacity: 0;
-    transition: opacity .2s;
-    cursor: pointer;
-}
-
-.slide-image:hover + .carousel-controls label{
-    opacity: 0.5;
-}
-
-.carousel-controls label:hover {
-    opacity: 1;
-}
-
-.carousel-controls .prev-slide {
-    width: 49%;
-    text-align: left;
-    left: 0;
-}
-
-.carousel-controls .next-slide {
-    width: 49%;
-    text-align: right;
-    right: 0;
-}
-
-.carousel-dots {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 20px;
-    z-index: 999;
-    text-align: center;
-}
-
-.carousel-dots .carousel-dot {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #fff;
-    opacity: 0.5;
-    margin: 10px;
-}
-
-input:checked + .slide-container .slide-image {
-    opacity: 1;
-    transform: scale(1);
-    transition: opacity 1s ease-in-out;
-}
-
-input:checked + .slide-container .carousel-controls label {
-     display: block; 
-}
-
-input#img-1:checked ~ .carousel-dots label#img-dot-1,
-input#img-2:checked ~ .carousel-dots label#img-dot-2,
-input#img-3:checked ~ .carousel-dots label#img-dot-3,
-input#img-4:checked ~ .carousel-dots label#img-dot-4,
-input#img-5:checked ~ .carousel-dots label#img-dot-5,
-input#img-6:checked ~ .carousel-dots label#img-dot-6 {
-	opacity: 1;
-}
-input:checked + .slide-container .nav label { display: block; }
-
-/* End Carousel */
-
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 200px;
-  border: 1px solid #f1f1f1;
-     margin-top: 25px;
-
-}
-
-/* This container is needed to position the front Card*/
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  }
-
-/* Centered text */
-.centeredTextOnImage {
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.Top {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.TopNews {
-   display: grid;
-   place-items: center;
-   margin-top: 25px;
-}
-
-	</style>
-<div id="main">
-<header>
-<grid-container>
-  <grid-item>
-<span style="font-size:30px;cursor:pointer;padding-right: 300px;" onclick="openNav()">&#9776; </span>
-  </grid-item>
-    <grid-item>
-<a href="./index.html" style="font-size: 20px">#EndGame</a>
-  </grid-item>
-  <grid-item>
-  <form action="/End-Game/search.html">
-      <input type="text" placeholder="Search.." name="search">
-          </form>
-</grid-item>
-  </grid-container>
-  </header>
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="./index.html">Home</a>
-  <a href="./Console.html">Console</a>
-  <a href="./TopGames.html">Top Games</a>
- </div>
-
-<div name="carousel">
-  <div class="carousel">
-    <ul class="slides">
-      <input type="radio" name="radio-buttons" id="img-1" checked />
-      <li class="slide-container">
-        <div class="slide-image">
-          <img src="https://www.techfu.fr/wp-content/uploads/e3-2021.jpg" alt="E3 2021">
-	          <div class="Top"><bold style="font-size: 30px;">June 21</bold></div>
-        </div>
-        <div class="carousel-controls">
-          <label for="img-3" class="prev-slide">
-            <span>&lsaquo;</span>
-          </label>
-          <label for="img-2" class="next-slide">
-            <span>&rsaquo;</span>
-          </label>
-        </div>
-      </li>
-      <input type="radio" name="radio-buttons" id="img-2" />
-      <li class="slide-container">
-        <div class="slide-image">
-          <img src="https://image.jeuxvideo.com/medias-md/159913/1599126910-6139-card.jpg" alt="Games Com 2021">
-	          <div class="Top"><bold style="font-size: 30px;">08/25/21</bold></div>
-        </div>
-        <div class="carousel-controls">
-          <label for="img-1" class="prev-slide">
-            <span>&lsaquo;</span>
-          </label>
-          <label for="img-3" class="next-slide">
-            <span>&rsaquo;</span>
-          </label>
-        </div>
-      </li>
-      <input type="radio" name="radio-buttons" id="img-3" />
-      <li class="slide-container">
-        <div class="slide-image">
-          <img src="https://images.blz-contentstack.com/v3/assets/blt89bc43d388ab63bf/blt07cb3be8f177e8e1/5f68ec7c1e50bb14a0ec728e/blizzcon-social.png" alt="Blizzcon 2021">
-	          	          <div class="Top"><bold style="font-size: 30px;">02/19/21</bold></div>
-
-        </div>
-        <div class="carousel-controls">
-          <label for="img-2" class="prev-slide">
-            <span>&lsaquo;</span>
-          </label>
-          <label for="img-1" class="next-slide">
-            <span>&rsaquo;</span>
-          </label>
-        </div>
-      </li>
-      <div class="carousel-dots">
-        <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
-        <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
-        <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
-      </div>
-    </ul>
+</style>
+<div class="grid-container">
+  <div class="Header">
+	  <header class="gridHeader">
+		  <a class="menu"><span onclick="openNav()" style="font-size: 20px;" class="unselectable">&#9776; Menu </span>
+      </a>
+		  <a class="logo" href="https://3samourai.github.io/End-Game/">#End-Game</a>
+		  <form class="search" action="/End-Game/search.html">
+        <input style="width: 150px;"
+        type="text" placeholder="Search.." name="search">
+            </form>
+    </header>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="./index.html">Home</a>
+      <a href="./Console.html">Console</a>
+      <a href="./TopGames.html">Top Games</a>
+     </div>
   </div>
-</div>
-
-<div class="TopNews" style="font-size: 20px">Top</div>
-
-<div>
-	<grid-container>
-		<grid-item>
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-	    <a href="search.html?search=Zelda">
-      <img id=twoIMG src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR7h2bNl7nBw6bXZ2SA2m0MMHVTzrQemOkkwA&usqp=CAU" alt="Zelda - Game Finder" style="width:300px;height:300px;">
-	      </a>
-	        <div class="centeredTextOnImage" style="color: White;"></div>
-    </div>
-     </div>
-</div> 
-  </grid-item>
-<grid-item>
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-	    <a href="search.html?search=Mario">
-      <img id=twoIMG src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Mario_emblem.svg/1024px-Mario_emblem.svg.png" alt="Mario - Game Finder" style="width:300px;height:300px;">
-	      </a>
-	        <div class="centeredTextOnImage"></div>
-    </div>
-     </div>
-</div> 
-  </grid-item>
-<grid-item>
-<div class="flip-card">
- <div class="flip-card-inner">
-    <div class="flip-card-front">
-	    <a href="search.html?search=SpiderMan">
-      <img id=twoIMG src="https://c.opencritic.com/images/games/6012/banner.jpg" alt="Spider-Man - Game Finder" style="width:300px;height:300px;">
-	      </a>
-	        <div class="centeredTextOnImage"></div>
-    </div>
-     </div>
-</div> 
-  </grid-item>
-</grid-container>
-</div>
-<div class="TopNews" style="margin-top: 350px;"><bold style="font-size: 30px;">What Game You Want Search in the Game Finder ?</bold></div>
-
-<div class="TopNews">
+  <div class="body">
+	  <div class="gridBody">
+	  <div class="search">
+<div class="center"><h1>What Game You Want Search in the Game Finder ?</h1></div>
+<div class="center">
 <form action="/End-Game/search.html">
-      <input type="text" placeholder="Search.." name="search" style="width: 800px;">
+      <input class="css-input" type="text" placeholder="Super Mario" name="search" minlength="4">
           </form>
 </div>
+</div>
+	  <div class="tile">
+      <p class="center"><bold>Need of Idea</bold></p>
+      <hr class="rounded"/>
+<div class="gridTile"> 
+<div class="tile1">
+ <div>
+    <div>
+	    <a href="search.html?search=Super+Mario">
+      <img id=twoIMG src="https://raw.githubusercontent.com/3Samourai/End-Game/main/icon/Mario.jpeg" alt="Super Mario - Game Finder" style="width:300px;height:300px;">
+        </a>
+    </div>
+     </div>
+</div> 
+<div class="tile2">
+ <div>
+    <div>
+	    <a href="search.html?search=Pokemon">
+      <img id=twoIMG src="https://raw.githubusercontent.com/3Samourai/End-Game/main/icon/pokemon.jpeg" alt="Pokemon - Game Finder" style="width:300px;height:300px;">
+	      </a>
+    </div>
+     </div>
+</div> 
+<div class="tile3">
+ <div>
+    <div>
+	    <a href="search.html?search=Zelda">
+      <img id=twoIMG src="https://raw.githubusercontent.com/3Samourai/End-Game/main/icon/Zelda2.jpeg" alt="The Legende Of Zelda - Game Finder" style="width:300px;height:300px;">
+	      </a>
+    </div>
+     </div>
+</div> 
+</div>  
+<hr class="rounded"/>
 
- <footer style="margin-top: 80px;">
-	   <grid-container>
-<grid-item>
-  <p style="font-size: 20px">Author: © <a href="https://github.com/3Samourai/End-Game">3Samourai</a></p>
-  </grid-item>
-  <grid-item name="Network Link">
-  <a href="https://github.com/3Samourai/End-Game/" style="
+	  </div>
+
+    <div class="decription"><a><bold>How-to Use :</bold></a>
+    <p>End-Game is a Game Finder. Just type a keyword or Game Name and see all results. 
+    </p><p>Click on a tile for Get More info about a Game.
+    </p></div>
+	  </div>
+  </div>
+  
+  
+  <div class="footer">
+	  <footer class="gridFooter">
+		   <a class="user" href="https://github.com/3Samourai/">Create by 3Samourai</a>
+		   <a href="https://github.com/3Samourai/End-Game/" class="logo" style="
     background: rgba(255,255,255,0);"><img src="https://raw.githubusercontent.com/3Samourai/End-Game/main/GitHub-Mark-64px.png" alt="Github" style="
     padding-top: 5px;"/></a>
-  </grid-item>
-  <grid-item>
-  <p style="font-size: 20px">Image, Reviews and Description are provided by <a href="https://opencritic.com/">OpenCritic. </a></p>
-  </grid-item>
-  </grid-container>
-
-</footer> 
-    </div>
+		  <a class="credit" href="https://opencritic.com/">Image, Reviews and Description are provided by OpenCritic.</a>
+  </div>
+</div>
 <script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft = "0";
-} 
-
-/*Code of 3Samourai*/
-	
-	/*SmartPhone Alert*/
-	if(window.innerHeight > window.innerWidth){
-    alert("Please use Landscape!");
-}
-
-</script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+  } 
+  </script>
 </body>
 </html>
