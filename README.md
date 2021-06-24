@@ -7,7 +7,7 @@
 -->
 <p align="center">
   <a href="" rel="noopener">
- <img width=64px height=64px src="https://raw.githubusercontent.com/3Samourai/End-Game/main/favicon.ico" alt="Project logo"></a>
+ <img width=200px height=200px src="https://raw.githubusercontent.com/3Samourai/End-Game/main/ENDGAME.png" alt="Project logo"></a>
 </p>
 
 <h3 align="center">End-Game</h3>
