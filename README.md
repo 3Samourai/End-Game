@@ -23,6 +23,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#about">About</a></li>
+    <li><a href="#How-To">How-To</a></li>
     <li><a href="#built_using">Built Using</a></li>
     <li><a href="#authors">Authors</a></li>
   </ol>
@@ -30,6 +31,10 @@
 
 ## 🧐 About <a name = "about"></a>
 Find Information About all New and Old Games
+
+## ❓ How-To <a name = "How-To"></a>
+End-Game is a Game Data Base. Just type a keyword or Game Name and see all results. 
+Click on a tile for Get More info about a Game.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 - [SimplyREADME](https://github.com/3Samourai/simply-readme) - README Generator
