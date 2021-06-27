@@ -1,360 +1,130 @@
 <html lang="en-US">
-<head>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&amp;display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-  <link rel="canonical" href="https://3samourai.github.io/End-Game/Console.html">
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-  <title>Console Finder - End Game</title>
-  	<meta name="description" content="Find Information About all New and Old Games Console in The Console Finder">
-	<meta name="keywords" content="Games, FlashCard, Steam, Video Games, GOG, PS5, Xbox, Fortnite, video games for xbox one, video games for ps4, video games for ps4">
-	<meta name="apple-mobile-web-app-title" content="End Game - Console Finder">
-	<meta name="application-name" content="End Game - Console Finder">
-	<meta id="page-meta-twitter:title" name="twitter:title" property="twitter:title" content="#EndGame">
-	<meta id="page-meta-twitter:description" name="twitter:description" property="twitter:description" content="Find Information About all New and Old Games Console">
-		</head>
-<body>
-<style>
-    body {
-	font-family: 'Poppins', sans-serif;
-}
+    <head>
+      <meta charset="UTF-8">
+       <link rel="stylesheet" href="style.css">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <title>End Game - Game Console Database</title>
+        <!--SEO-->
+        <link rel="canonical" href="https://3samourai.github.io/End-Game/Console.html">
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        <meta name="description" content="End-Game - Video Game Console Data Base">
+        <meta name="apple-mobile-web-app-title" content="End Game">
+        <meta name="application-name" content="End Game">
+        <meta name="google-site-verification" content="1u_g1cG-B9VNASDMyJC4fxvvacjHmabK_TaCzDFydlw" />
+        <meta id="page-meta-twitter:title" name="twitter:title" property="twitter:title" content="#EndGame">
+        <meta id="page-meta-twitter:description" name="twitter:description" property="twitter:description" content="End-Game - Video Game Console Data Base #EndGame">
+        <!--End SEO-->
+    </head>
+   <body>
+       <section class="header-no-home">
+           <nav>
+               <a href="index.html"><img src="./img/EndGame.png"></a>
+               <div class="nav-links" id="nav-links">
+                   <!--Close Phone Menu-->
+                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16" onclick="hideMenu()">
+                       <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                     </svg>
+                   <ul>
+                       <li><a href="./index.html">HOME</a></li>
+                       <li><a href="./Console.html">CONSOLE</a></li>
+                       <li><a href="./search.html">TOP GAMES</a></li>
+                       <li>
+                       <div class="search-box">
+                           <input type="text" id="search-txt" class="search-txt" placeholder="Search..."/>
+                           <a class="search-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                              </svg>
+                           </a>
+                          </div>
+                       </li>
+                   </ul>
+                   
+               </div>
+               <!---Open Phone Menu-->
+               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16" onclick="showMenu()">
+                   <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                 </svg>
+               </nav>
+       </section>
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 0.2fr 4fr 1fr;
-  gap: 10px 10px;
-  grid-template-areas:
-    "Header Header Header Header"
-    "body body body body"
-    "footer footer footer footer";
-}
-
-.Header { 
-	grid-area: Header; 
-	background-color: red;
-}
-
-.body { 
-    grid-area: body; 
-    margin-bottom: 170px;
-}
-
-.footer { 
-  grid-area: footer; 
-  background-color: red;
-  padding: 0.7fr;
-
-  }
-
-@media screen and (max-width: 950px) {
-.grid-container {
-       grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
-      grid-template-areas:
-    "Header"
-    "body"
-    "footer";
-  }
-}
-
-/*Start header*/
-.gridHeader {
-	  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  gap: 10px 10px;
-  grid-template-areas:
-    "Menu Logo Search";
-    text-align: center; 
-
-}
-
-.menu { grid-area: Menu; }
-.logo { grid-area: Logo; }
-.search { grid-area: Search; }
-
-@media screen and (max-width: 500px) {
- .gridHeader {
-       grid-template-columns: 1fr;
-      grid-template-areas:
-    "Logo"
-    "Menu"
-    "Search";
-  }
-}
-/*End Header*/
-/*Start Body*/
-.gridBody {
-	  display: grid;
-       grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    "Tile";
-    text-align: center; 
-
-}
-.tile { grid-area: Tile; }
-/*End Body*/
-
-/*Start Footer*/
-.gridFooter {
-	  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    "User Logo Credit";
-    text-align: center; 
-
-}
-.user { grid-area: User; }
-.credit { grid-area: Credit; }
-
-@media screen and (max-width: 500px) {
- .gridFooter {
-       grid-template-columns: 1fr;
-      grid-template-areas:
-    "User"
-    "Logo"
-    "Credit";
-  }
-}
-/*End Footer*/
-.center {
-   display: grid;
-   place-items: center;
-}
-/*Start Tile*/
-
-.gridTile {
-	  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  gap: 200px 200px;
-  text-align: center; 
-  place-items: center;
-
-  grid-template-areas:
-    "Tile1 Tile2 Tile3"
-    "Tile4 Tile5 Tile6"
-    "Tile7 Tile8 Tile9";
-}
-.tile1 { grid-area: Tile1; }
-.tile2 { grid-area: Tile2; }
-.tile3 { grid-area: Tile3; }
-.tile4 { grid-area: Tile4; }
-.tile5 { grid-area: Tile5; }
-.tile6 { grid-area: Tile6; }
-.tile7 { grid-area: Tile7; }
-.tile8 { grid-area: Tile8; }
-.tile9 { grid-area: Tile9; }
-
-@media screen and (max-width: 950px) {
- .gridtile {
-       grid-template-columns: 1fr;
-       grid-template-rows: 1fr;
-      grid-template-areas:
-    "Tile1"
-    "Tile2"
-    "Tile3"
-    "Tile4"
-    "Tile5"
-    "Tile6"
-    "Tile7" 
-    "Tile8"
-    "Tile9";
-  }
-}
-
-/*End Tile*/
-/*Start Menu*/
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-/*End Menu*/
-
-.unselectable {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 200px;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-}
-
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 150%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-}
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-/* Style the back side */
-.flip-card-back {
-background-color: #2980b9;
-  color: white;
-  transform: rotateY(180deg);
-} 
-</style>
-<div class="grid-container">
-    <div class="Header">
-        <header class="gridHeader">
-            <a class="menu"><span onclick="openNav()" style="font-size: 20px;" class="unselectable">&#9776; Menu </span>
-        </a>
-            <a class="logo" href="https://3samourai.github.io/End-Game/">#End-Game</a>
-            <form class="search" action="/End-Game/search.html">
-          <input style="width: 150px;"
-          type="text" placeholder="Search.." name="search">
-              </form>
-      </header>
-      <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a href="./index.html">Home</a>
-        <a href="./Console.html">Console</a>
-        <a href="./TopGames.html">Top Games</a>
+   <section class="game">
+       <div class="row">
+           <div class="game-col">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img id=oneIMG alt="Nintendo Switch" style="width:300px;height:300px;" src="./img/switch.svg">
+                  </div>
+                  <div class="flip-card-back" id="oneDiv">
+                    <h1>Nintendo Switch</h1> 
+                    <p>Release Date: 2017-03-03</p>
+                    <p>
+                      The Switch is a hybrid console, 
+                      which means that the player can either connect it to a television or use it by itself as a handheld gaming device. 
+                      It uses controllers called Joy-con, which attach to both sides of the console when it is in handheld mode. 
+                      They are attached to a grip when in television mode.
+                    </p>
+                  </div>
+                </div>
+              </div>
+           </div>
+           <div class="game-col">
+               <div class="game-col">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img id=twoIMG alt="PlayStation 5" style="width:300px;height:300px;" src="./img/ps5.jpg">
+                      </div>
+                      <div class="flip-card-back" id="twoDiv"> 
+                        <h1>Playstation 5</h1>
+                        <p>Release Date: 2020-11-12</p>
+                        <p>
+                          PlayStation 5 (also known by the abbreviated name PS5) is the fifth home video game console made by Sony. 
+                          The PlayStation 4 games work with it. There are two versions of the console, one with a Blu-ray optical disc drive that costs $500. The second version costs $400 and does not have the disc drive.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+               </div>
+           </div>
+           <div class="game-col">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img id=threeIMG alt="Loading" style="width:300px;height:300px;" src="./img/xsx.jpg">
+                  </div>
+                  <div class="flip-card-back" id="threeDiv">
+                    <h1>Xbox Serie X</h1> 
+                    <p>Release Date: 2020-11-10</p>
+                    <p>
+                      Xbox head Phil Spencer stated that Microsoft was prioritizing high frame rates and faster load times as a priority over higher resolutions, 
+                      which the Series X achieves via the better-matched capabilities of the CPU and GPU.
+                    </p>
+                  </div>
+                </div>
+              </div>
+           </div>
+           </div>
        </div>
-    </div>
-    <div class="body">
-        <div class="gridBody">
-            <div class="tile">
-                <h1 class="center"><bold>New Video Game Consoles</bold></h1>
-                <hr class="rounded"/>
-          <div class="gridTile "> 
-            <div class="flip-card tile1">
-                <div class="flip-card-inner roundedImage">
-                  <div class="flip-card-front">
-                    <img id=oneIMG alt="Loading" style="width:300px;height:300px;" src="icon/ps5.jpg">
-                  </div>
-                  <div class="flip-card-back" id="oneText">
-                 <h1 style="font-size: 25px;">PS5</h1>
-                 <p>11/12/20</p>
-                 <p>Descrption:</p>
-                    <p style="font-size: 12px;">The PlayStation 5 has a SDD customized for high-speed data streaming. It has a custom AMD GPU capable of ray tracing, 4K resolution display at up to 120 frames per second, 3D audio effects, and backward compatibility with most PlayStation 4.      
-                    <p>Editor:Sony</p>
-
-                  </div>
-                </div>
-              </div>
-              <div class="flip-card tile2">
-                <div class="flip-card-inner roundedImage">
-                  <div class="flip-card-front">
-                    <img id=twoIMG alt="Loading" style="width:300px;height:300px;" src="icon/xsx.jpg">
-                  </div>
-                  <div class="flip-card-back" id="twoText">
-                    <h1 style="font-size: 25px;">Xbox Series X</h1>
-                    <p>11/10/20</p>
-                    <p>Descrption:</p>
-                    <p style="font-size: 12px;">Microsoft is prioritizing hardware performance, including support for higher display resolutions (up to 8K resolution) along with frame rates, real-time ray tracing, and use of a high-speed solid-state drive to reduce loading times.</p>
-                          <p>Editor: Microsoft</p>
-                  </div>
-                </div>
-              </div>
-              <div class="flip-card tile3">
-                <div class="flip-card-inner roundedImage">
-                  <div class="flip-card-front">
-                    <img id=treeIMG alt="Loading" style="width:300px;height:300px;" src="icon/switch.svg">
-                  </div>
-                  <div class="flip-card-back" id="treeText">
-                    <h1 style="font-size: 25px;">Nintendo Switch</h1>
-                    <p>3/3/17</p>
-                    <p>Descrption:</p>
-                    <p style="font-size: 12px;">The Nintendo Switch is a hybrid video game console, consisting of a console unit, a dock, and two Joy-Con controllers. Although it is a hybrid console, Nintendo classifies it as "a home console that you can take with you on the go".</p>
-                          <p>Editor: Nintendo</p>
-              
-                  </div>
-                </div>
-              </div>
-            </div>
-            </div>
-            
-            </div>
-         
-            </div>
-            <div class="footer">
-                <footer class="gridFooter">
-                     <a class="user" href="https://github.com/3Samourai/">Create by 3Samourai</a>
-                     <a href="https://github.com/3Samourai/End-Game/" class="logo" style="
-              background: rgba(255,255,255,0);"><img src="https://raw.githubusercontent.com/3Samourai/End-Game/main/GitHub-Mark-64px.png" alt="Github" style="
-              padding-top: 5px;"/></a>
-                    <a class="credit" href="https://opencritic.com/">Image, Reviews and Description are provided by OpenCritic.</a>
-            </div>
-</div>
-		<a href="https://github.com/3Samourai/End-Game/" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
-<script>
- function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-  }
-  
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-  } 
-</script>
-</body>
+   </section>
+       <!-----Javascript for Toggle Menu----->
+       <script>
+           var menu = document.getElementById("nav-links");
+           function showMenu() {
+               menu.style.right = "0";
+           }
+           function hideMenu() {
+               menu.style.right = "-200px";
+           }
+       </script>
+       <script>
+        document.getElementById("search-txt").addEventListener("keyup", function(event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+                document.location.href="./search.html?search="+document.getElementById("search-txt").value; 
+            }
+        });
+    </script>
+   </body>
+</html>
