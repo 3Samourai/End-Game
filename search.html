@@ -1,643 +1,484 @@
 <html lang="en-US">
-<head>
-	<meta name="robots" content="noindex">
+    <head>
+      <meta charset="UTF-8">
+       <link rel="stylesheet" href="style.css">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <meta name="robots" content="noindex">
+       <title>End Game - Search</title>
+    </head>
+   <body>
+       <section class="header-no-home">
+           <nav>
+               <a href="index.html"><img src="./img/EndGame.png"></a>
+               <div class="nav-links" id="nav-links">
+                   <!--Close Phone Menu-->
+                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16" onclick="hideMenu()">
+                       <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                     </svg>
+                   <ul>
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="./Console.html">CONSOLE</a></li>
+                    <li><a href="./search.html">TOP GAMES</a></li>
+                       <li>
+                       <div class="search-box">
+                           <input type="text" id="search-txt" class="search-txt" placeholder="Search..."/>
+                           <a class="search-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                              </svg>
+                           </a>
+                          </div>
+                       </li>
+                   </ul>
+                   
+               </div>
+               <!---Open Phone Menu-->
+               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16" onclick="showMenu()">
+                   <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                 </svg>
+               </nav>
+       </section>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&amp;display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-  <link rel="canonical" href="https://3samourai.github.io/End-Game/search?search=mario">
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-  <title>End Game - Game Finder</title>
-  <meta name="description" content="Search Information About all New and Old Games">
-	<meta name="keywords" content="Games, FlashCard, Steam, Video Games, GOG, PS5, Xbox, Fortnite, video games for xbox one, video games for ps4, video games for ps4">
-	<meta name="apple-mobile-web-app-title" content="End Game">
-	<meta name="application-name" content="End Game">
-	<meta id="page-meta-twitter:title" name="twitter:title" property="twitter:title" content="#EndGame">
-	<meta id="page-meta-twitter:description" name="twitter:description" property="twitter:description" content="Find Information About all New and Old Games">
-		</head>
-<body>
-<style>
-    body {
-	font-family: 'Poppins', sans-serif;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 0.2fr 4fr 1fr;
-  gap: 10px 10px;
-  grid-template-areas:
-    "Header Header Header Header"
-    "body body body body"
-    "footer footer footer footer";
-}
-
-.Header { 
-	grid-area: Header; 
-	background-color: red;
-}
-
-.body { 
-    grid-area: body; 
-    margin-bottom: 170px;
-}
-
-.footer { 
-  grid-area: footer; 
-  background-color: red;
-  padding: 0.7fr;
-
-  }
-
-@media screen and (max-width: 950px) {
-.grid-container {
-       grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
-      grid-template-areas:
-    "Header"
-    "body"
-    "footer";
-  }
-}
-
-/*Start header*/
-.gridHeader {
-	  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  gap: 10px 10px;
-  grid-template-areas:
-    "Menu Logo Search";
-    text-align: center; 
-
-}
-
-.menu { grid-area: Menu; }
-.logo { grid-area: Logo; }
-.search { grid-area: Search; }
-
-@media screen and (max-width: 500px) {
- .gridHeader {
-       grid-template-columns: 1fr;
-      grid-template-areas:
-    "Logo"
-    "Menu"
-    "Search";
-  }
-}
-/*End Header*/
-/*Start Body*/
-.gridBody {
-	  display: grid;
-       grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    "Tile";
-    text-align: center; 
-
-}
-.tile { grid-area: Tile; }
-/*End Body*/
-
-/*Start Footer*/
-.gridFooter {
-	  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    "User Logo Credit";
-    text-align: center; 
-
-}
-.user { grid-area: User; }
-.credit { grid-area: Credit; }
-
-@media screen and (max-width: 500px) {
- .gridFooter {
-       grid-template-columns: 1fr;
-      grid-template-areas:
-    "User"
-    "Logo"
-    "Credit";
-  }
-}
-/*End Footer*/
-.center {
-   display: grid;
-   place-items: center;
-}
-/*Start Tile*/
-
-.gridTile {
-	  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  gap: 200px 200px;
-  text-align: center; 
-  place-items: center;
-
-  grid-template-areas:
-    "Tile1 Tile2 Tile3"
-    "Tile4 Tile5 Tile6"
-    "Tile7 Tile8 Tile9";
-}
-.tile1 { grid-area: Tile1; }
-.tile2 { grid-area: Tile2; }
-.tile3 { grid-area: Tile3; }
-.tile4 { grid-area: Tile4; }
-.tile5 { grid-area: Tile5; }
-.tile6 { grid-area: Tile6; }
-.tile7 { grid-area: Tile7; }
-.tile8 { grid-area: Tile8; }
-.tile9 { grid-area: Tile9; }
-
-@media screen and (max-width: 950px) {
- .gridtile {
-       grid-template-columns: 1fr;
-       grid-template-rows: 1fr;
-      grid-template-areas:
-    "Tile1"
-    "Tile2"
-    "Tile3"
-    "Tile4"
-    "Tile5"
-    "Tile6"
-    "Tile7" 
-    "Tile8"
-    "Tile9";
-  }
-}
-
-/*End Tile*/
-/*Start Menu*/
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-/*End Menu*/
-
-.unselectable {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 200px;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-}
-
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 150%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-}
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-/* Style the back side */
-.flip-card-back {
-background-color: #2980b9;
-  color: white;
-  transform: rotateY(180deg);
-} 
-</style>
-<div class="grid-container">
-    <div class="Header">
-        <header class="gridHeader">
-            <a class="menu"><span onclick="openNav()" style="font-size: 20px;" class="unselectable">&#9776; Menu </span>
-        </a>
-            <a class="logo" href="https://3samourai.github.io/End-Game/">#End-Game</a>
-            <form class="search" action="/End-Game/search.html">
-          <input style="width: 150px;"
-          type="text" placeholder="Search.." name="search">
-              </form>
-      </header>
-      <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a href="./index.html">Home</a>
-        <a href="./Console.html">Console</a>
-        <a href="./TopGames.html">Top Games</a>
-       </div>
-    </div>
-    <div class="body">
-        <div class="gridBody">
-            <div class="tile">
-                <h1 class="center"><bold>Results: </bold></h1>
-                <hr class="rounded"/>
-          <div class="gridTile "> 
-            <div class="flip-card tile1">
-                <div class="flip-card-inner roundedImage">
+   <section class="game">
+       <div class="row">
+           <div class="game-col">
+            <div class="flip-card">
+                <div class="flip-card-inner">
                   <div class="flip-card-front">
                     <img id=oneIMG alt="Loading" style="width:300px;height:300px;">
                   </div>
-                  <div class="flip-card-back" id="oneText">
-                 <h1 style="font-size: 25px;">Loading</h1>
-                    <p>2013r</p>
-                    <p>5/5</p>
-                    <p>Descrption:</p>
-                    <p></p>
-                    <p>editor</p>
+                  <div class="flip-card-back" id="oneDiv"> 
                   </div>
                 </div>
               </div>
-              <div class="flip-card tile2">
-                <div class="flip-card-inner roundedImage">
+           </div>
+           <div class="game-col">
+               <div class="game-col">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img id=twoIMG alt="Loading" style="width:300px;height:300px;">
+                      </div>
+                      <div class="flip-card-back" id="twoDiv"> 
+                      </div>
+                    </div>
+                  </div>
+               </div>
+           </div>
+           <div class="game-col">
+            <div class="flip-card">
+                <div class="flip-card-inner">
                   <div class="flip-card-front">
-                    <img id=twoIMG alt="Loading" style="width:300px;height:300px;">
+                    <img id=threeIMG alt="Loading" style="width:300px;height:300px;">
                   </div>
-                  <div class="flip-card-back" id="twoText">
-                 <h1 style="font-size: 25px;">Loading</h1>
-                    <p>2013r</p>
-                    <p>5/5</p>
-                    <p>Descrption:</p>
-                    <p></p>
-                    <p>editor</p>
+                  <div class="flip-card-back" id="threeDiv"> 
                   </div>
                 </div>
               </div>
-              <div class="flip-card tile3">
-                <div class="flip-card-inner roundedImage">
-                  <div class="flip-card-front">
-                    <img id=treeIMG alt="Loading" style="width:300px;height:300px;">
-                  </div>
-                  <div class="flip-card-back" id="treeText">
-                 <h1 style="font-size: 25px;">Loading</h1>
-                    <p>2013r</p>
-                    <p>5/5</p>
-                    <p>Descrption:</p>
-                    <p></p>
-                    <p>editor</p>
-                  </div>
-                </div>
-              </div>
-              <div class="flip-card tile4">
-                <div class="flip-card-inner roundedImage">
-                  <div class="flip-card-front">
-                    <img id=fourIMG alt="Loading" style="width:300px;height:300px;">
-                  </div>
-                  <div class="flip-card-back" id="fourText">
-                 <h1 style="font-size: 25px;">Loading</h1>
-                    <p>2013r</p>
-                    <p>5/5</p>
-                    <p>Descrption:</p>
-                    <p></p>
-                    <p>editor</p>
-                  </div>
-                </div>
-              </div>
-              <div class="flip-card tile5">
-                <div class="flip-card-inner roundedImage">
-                  <div class="flip-card-front">
-                    <img id=fiveIMG alt="Loading" style="width:300px;height:300px;">
-                  </div>
-                  <div class="flip-card-back" id="fiveText">
-                 <h1 style="font-size: 25px;">Loading</h1>
-                    <p>2013r</p>
-                    <p>5/5</p>
-                    <p>Descrption:</p>
-                    <p></p>
-                    <p>editor</p>
-                  </div>
-                </div>
-              </div>
-              <div class="flip-card tile6">
-                <div class="flip-card-inner roundedImage">
-                  <div class="flip-card-front">
-                    <img id=sixIMG alt="Loading" style="width:300px;height:300px;">
-                  </div>
-                  <div class="flip-card-back" id="sixText">
-                 <h1 style="font-size: 25px;">Loading</h1>
-                    <p>2013r</p>
-                    <p>5/5</p>
-                    <p>Descrption:</p>
-                    <p></p>
-                    <p>editor</p>
-                  </div>
-                </div>
-              </div>
-              <div class="flip-card tile7">
-                <div class="flip-card-inner roundedImage">
-                  <div class="flip-card-front">
-                    <img id=sevenIMG alt="Loading" style="width:300px;height:300px;">
-                  </div>
-                  <div class="flip-card-back" id="sevenText">
-                 <h1 style="font-size: 25px;">Loading</h1>
-                    <p>2013r</p>
-                    <p>5/5</p>
-                    <p>Descrption:</p>
-                    <p></p>
-                    <p>editor</p>
-                  </div>
-                </div>
-              </div>
-              <div class="flip-card tile8">
-                <div class="flip-card-inner roundedImage">
-                  <div class="flip-card-front">
-                    <img id=eightIMG alt="Loading" style="width:300px;height:300px;">
-                  </div>
-                  <div class="flip-card-back" id="eightText">
-                 <h1 style="font-size: 25px;">Loading</h1>
-                    <p>2013r</p>
-                    <p>5/5</p>
-                    <p>Descrption:</p>
-                    <p></p>
-                    <p>editor</p>
-                  </div>
-                </div>
-              </div>
-              <div class="flip-card tile9">
-                <div class="flip-card-inner roundedImage">
-                  <div class="flip-card-front">
-                    <img id=nineIMG alt="Loading" style="width:300px;height:300px;">
-                  </div>
-                  <div class="flip-card-back" id="nineText">
-                 <h1 style="font-size: 25px;">Loading</h1>
-                    <p>2013r</p>
-                    <p>5/5</p>
-                    <p>Descrption:</p>
-                    <p></p>
-                    <p>editor</p>
-                  </div>
-                </div>
-              </div>
+           </div>
+           </div>
+       </div>
+   </section>
 
+   <section class="game">
+    <div class="row">
+        <div class="game-col">
+         <div class="flip-card">
+             <div class="flip-card-inner">
+               <div class="flip-card-front">
+                 <img id=fourIMG alt="Loading" style="width:300px;height:300px;">
+               </div>
+               <div class="flip-card-back" id="fourDiv"> 
+               </div>
+             </div>
+           </div>
+        </div>
+        <div class="game-col">
+            <div class="game-col">
+             <div class="flip-card">
+                 <div class="flip-card-inner">
+                   <div class="flip-card-front">
+                     <img id=fiveIMG alt="Loading" style="width:300px;height:300px;">
+                   </div>
+                   <div class="flip-card-back" id="fiveDiv"> 
+                   </div>
+                 </div>
+               </div>
             </div>
-            </div>
-            
-            </div>
-         
-            </div>
-            <div class="footer">
-                <footer class="gridFooter">
-                     <a class="user" href="https://github.com/3Samourai/">Create by 3Samourai</a>
-                     <a href="https://github.com/3Samourai/End-Game/" class="logo" style="
-              background: rgba(255,255,255,0);"><img src="https://raw.githubusercontent.com/3Samourai/End-Game/main/GitHub-Mark-64px.png" alt="Github" style="
-              padding-top: 5px;"/></a>
-                    <a class="credit" href="https://opencritic.com/">Image, Reviews and Description are provided by OpenCritic.</a>
-            </div>
-</div>
-<script>
-    /*Start of IMG Element*/
-	var  oneIMG = document.getElementById("oneIMG")
-	var  twoIMG = document.getElementById("twoIMG")
-	var  treeIMG = document.getElementById("treeIMG")
-	var  fourIMG = document.getElementById("fourIMG")
-	var  fiveIMG = document.getElementById("fiveIMG")
-	var  sixIMG = document.getElementById("sixIMG")
-	var  sevenIMG = document.getElementById("sevenIMG")
-	var  eightIMG = document.getElementById("eightIMG")
-	var  nineIMG = document.getElementById("nineIMG")
-	/*End of IMG Element*/
-	
-	/*Start of Text Element*/
-var  oneText = document.getElementById("oneText");
-		var oneChild = oneText.children;
-var  twoText = document.getElementById("twoText");
-		var twoChild = twoText.children;
-var  treeText = document.getElementById("treeText");
-		var treeChild = treeText.children;
-var  fourText = document.getElementById("fourText");
-		var fourChild = fourText.children;
-var  fiveText = document.getElementById("fiveText");
-		var fiveChild = fiveText.children;
-var  sixText = document.getElementById("sixText");
-		var sixChild = sixText.children;
-var  sevenText = document.getElementById("sevenText");
-		var sevenChild = sevenText.children;
-var  eightText = document.getElementById("eightText");
-		var eightChild = eightText.children;
-var  nineText = document.getElementById("nineText");
-		var nineChild = nineText.children;
-    /*End of Text Element*/
-
-
-
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft = "0";
-} 
-var value;
-var count = 0;
-function extractUrlParams(){	
-	var t = location.search.substring(1).split('&');
-	var f = [];
-	for (var i=0; i<t.length; i++){
-		var x = t[ i ].split('=');
-		f[x[0]]=x[1];
-	}
-	if (f.search === undefined)
-	{f.search = "mario"
-		}
-	return f;
-}
-
-var p1 = new Promise(function(resolve) {
-  resolve(extractUrlParams());
- });
- p1.then((valeur) => {	
-	 var Mario = valeur;
-	 var p2 = new Promise(function(resolve) {
-var requestURL = 'https://api.opencritic.com/api/game/search?criteria=${' + Mario.search + '}';
-var request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
-request.send(); 
-request.onload = function() {
-  value = request.response;
-   resolve(value);
-}
- }); 
- p2.then((P2value) => {
-      value.forEach(function(item){
-	      
-	  var urlAPI = "https://api.opencritic.com/api/game/"+ P2value[count].id;
-	  count += 1;
-var Newrequest = new XMLHttpRequest();
-Newrequest.open('GET', urlAPI);
-Newrequest.responseType = 'json';
-Newrequest.send();
-Newrequest.onload = function() {
-  var Newvalue = Newrequest.response;
-  var IMGData = "https:"+ Newvalue.bannerScreenshot.fullRes;
-var regex = /([\.\?\!\,])/;
-var regexOfDate = /([T])/;
-var match = Newvalue.description.match(regex);
-var index = match.index;
-var description = Newvalue.description.slice(0,index+1);
-var editor = Newvalue.Companies[0].name;
-var matchOfDate = Newvalue.firstReleaseDate.match(regexOfDate);
-var indexOfDate = matchOfDate.index;
-var date = Newvalue.firstReleaseDate.slice(0,10);
-
-
-  if (oneIMG.src === "")
-  {
-	  oneIMG.src = IMGData;
-  oneChild[0].outerHTML = "<h1 style=\"font-size: 20px;\">"+ Newvalue.name +"</h1>";
-  oneChild[1].outerHTML = "<p style=\"font-size: 12px;\">"+ "Release Date: " + date + "</p>";
-  oneChild[2].outerHTML = "<p style=\"font-size: 12px;\">"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
-  oneChild[4].outerHTML = "<p style=\"font-size: 15px;\">"+ description + "</p>";
-  oneChild[5].outerHTML = "<p style=\"font-size: 12px;\">"+"Editor: " + editor + "</p>";
-
-  
-  }
-  else if (twoIMG.src === "")
-  {
-  twoIMG.src = IMGData;
-   twoChild[0].outerHTML = "<h1 style=\"font-size: 20px;\">"+ Newvalue.name +"</h1>";
-   twoChild[1].outerHTML = "<p style=\"font-size: 12px;\">"+ "Release Date: " + date + "</p>";
-  twoChild[2].outerHTML = "<p style=\"font-size: 12px;\">"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
-   twoChild[4].outerHTML = "<p style=\"font-size: 15px;\">"+ description + "</p>";
-twoChild[5].outerHTML = "<p style=\"font-size: 12px;\">"+"Editor: " + editor + "</p>";
-
-
-  }
-   else if (treeIMG.src === "")
-  {
-  treeIMG.src = IMGData;
-  treeChild[0].outerHTML = "<h1 style=\"font-size: 20px;\">"+ Newvalue.name +"</h1>";
-  treeChild[1].outerHTML = "<p style=\"font-size: 12px;\">"+ "Release Date: " + date + "</p>";
-  treeChild[2].outerHTML = "<p style=\"font-size: 12px;\">"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
-  treeChild[4].outerHTML = "<p style=\"font-size: 15px;\">"+ description + "</p>";
-treeChild[5].outerHTML = "<p style=\"font-size: 12px;\">"+"Editor: " + editor + "</p>";
-
-
-  }
-   else if (fourIMG.src === "")
-  {
-  fourIMG.src = IMGData;
-  fourChild[0].outerHTML = "<h1 style=\"font-size: 20px;\">"+ Newvalue.name +"</h1>";
-  fourChild[1].outerHTML = "<p style=\"font-size: 12px;\">"+ "Release Date: " + date + "</p>";
-  fourChild[2].outerHTML = "<p style=\"font-size: 12px;\">"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
-  fourChild[4].outerHTML = "<p style=\"font-size: 15px;\">"+ description + "</p>";
-fourChild[5].outerHTML = "<p style=\"font-size: 12px;\">"+"Editor: " + editor + "</p>";
-
-
-  }
-   else if (fiveIMG.src === "")
-  {
-  fiveIMG.src = IMGData;
-  fiveChild[0].outerHTML = "<h1 style=\"font-size: 20px;\">"+ Newvalue.name +"</h1>";
-  fiveChild[1].outerHTML = "<p>"+ "Release Date: " + date + "</p>";
-  fiveChild[2].outerHTML = "<p>"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
-  fiveChild[4].outerHTML = "<p style=\"font-size: 15px;\">"+ description + "</p>";
-fiveChild[5].outerHTML = "<p>"+"Editor: " + editor + "</p>";
-
-
-  }
-   else if (sixIMG.src === "")
-  {
-  sixIMG.src = IMGData;
-  sixChild[0].outerHTML = "<h1 style=\"font-size: 20px;\">"+ Newvalue.name +"</h1>";
-  sixChild[1].outerHTML = "<p style=\"font-size: 12px;\">"+ "Release Date: " + date + "</p>";
-  sixChild[2].outerHTML = "<p style=\"font-size: 12px;\">"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
-  sixChild[4].outerHTML = "<p style=\"font-size: 15px;\">"+ description + "</p>";
-sixChild[5].outerHTML = "<p style=\"font-size: 12px;\">"+"Editor: " + editor + "</p>";
-
-
-  }
-   else if (sevenIMG.src === "")
-  {
-  sevenIMG.src = IMGData;
-  sevenChild[0].outerHTML = "<h1 style=\"font-size: 20px;\">"+ Newvalue.name +"</h1>";
-  sevenChild[1].outerHTML = "<p style=\"font-size: 12px;\">"+ "Release Date: " + date + "</p>";
-  sevenChild[2].outerHTML = "<p style=\"font-size: 12px;\">"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
-  sevenChild[4].outerHTML = "<p style=\"font-size: 15px;\">"+ description + "</p>";
-sevenChild[5].outerHTML = "<p style=\"font-size: 12px;\">"+"Editor: " + editor + "</p>";
-
-
-  }
-   else if (eightIMG.src === "")
-  {
-  eightIMG.src = IMGData;
-  eightChild[0].outerHTML = "<h1 style=\"font-size: 20px;\">"+ Newvalue.name +"</h1>";
-  eightChild[1].outerHTML = "<p style=\"font-size: 12px;\">"+ "Release Date: " + date + "</p>";
-  eightChild[2].outerHTML = "<p style=\"font-size: 12px;\">"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
-  eightChild[4].outerHTML = "<p style=\"font-size: 15px;\">"+ description + "</p>";
-eightChild[5].outerHTML = "<p style=\"font-size: 12px;\">"+"Editor: " + editor + "</p>";
-
-
-  }
-     else if (nineIMG.src === "")
-  {
-  nineIMG.src = IMGData;
-  nineChild[0].outerHTML = "<h1 style=\"font-size: 20px;\">"+ Newvalue.name +"</h1>";
-  nineChild[1].outerHTML = "<p style=\"font-size: 12px;\">"+ "Release Date: " + date + "</p>";
-  nineChild[2].outerHTML = "<p style=\"font-size: 12px;\">"+ "Recommended  at "+ Newvalue.averageScore.toString().slice(0,4) +"%" + "</p>";
-  nineChild[4].outerHTML = "<p style=\"font-size: 15px;\">"+ description + "</p>";
-nineChild[5].outerHTML = "<p style=\"font-size: 12px;\">"+"Editor: " + editor + "</p>";
-
-
-  };
-}});
-    })});
-</script>
-</body>
+        </div>
+        <div class="game-col">
+         <div class="flip-card">
+             <div class="flip-card-inner">
+               <div class="flip-card-front">
+                 <img id=sixIMG alt="Loading" style="width:300px;height:300px;">
+               </div>
+               <div class="flip-card-back" id="sixDiv"> 
+               </div>
+             </div>
+           </div>
+        </div>
+        </div>
+    </div>
+</section>
+<section class="game">
+  <div class="row">
+      <div class="game-col">
+       <div class="flip-card">
+           <div class="flip-card-inner">
+             <div class="flip-card-front">
+               <img id=sevenIMG alt="Loading" style="width:300px;height:300px;">
+             </div>
+             <div class="flip-card-back" id="sevenDiv"> 
+             </div>
+           </div>
+         </div>
+      </div>
+      <div class="game-col">
+          <div class="game-col">
+           <div class="flip-card">
+               <div class="flip-card-inner">
+                 <div class="flip-card-front">
+                   <img id=eightIMG alt="Loading" style="width:300px;height:300px;">
+                 </div>
+                 <div class="flip-card-back" id="eightDiv"> 
+                 </div>
+               </div>
+             </div>
+          </div>
+      </div>
+      <div class="game-col">
+       <div class="flip-card">
+           <div class="flip-card-inner">
+             <div class="flip-card-front">
+               <img id=nineIMG alt="Loading" style="width:300px;height:300px;">
+             </div>
+             <div class="flip-card-back" id="nineDiv"> 
+             </div>
+           </div>
+         </div>
+      </div>
+      </div>
+  </div>
+</section>
+       <!-----Javascript for Toggle Menu-->
+       <script>
+           var menu = document.getElementById("nav-links");
+           function showMenu() {
+               menu.style.right = "0";
+           }
+           function hideMenu() {
+               menu.style.right = "-200px";
+           }
+       </script>
+       <script>
+        /*Start of IMG Element*/
+        var  oneIMG = document.getElementById("oneIMG");
+        var  twoIMG = document.getElementById("twoIMG");
+        var  threeIMG = document.getElementById("threeIMG");
+        var  fourIMG = document.getElementById("fourIMG");
+        var  fiveIMG = document.getElementById("fiveIMG");
+        var  sixIMG = document.getElementById("sixIMG");
+        var  sevenIMG = document.getElementById("sevenIMG");
+        var  eightIMG = document.getElementById("eightIMG");
+        var  nineIMG = document.getElementById("nineIMG");
+        /*End of IMG Element*/
+        
+        /*Start of Text Element*/
+        var  oneDiv = document.getElementById("oneDiv");
+        var  twoDiv = document.getElementById("twoDiv");
+        var  threeDiv = document.getElementById("threeDiv");
+        var  fourDiv = document.getElementById("fourDiv");
+        var  fiveDiv = document.getElementById("fiveDiv");
+        var  sixDiv = document.getElementById("sixDiv");
+        var  sevenDiv = document.getElementById("sevenDiv");
+        var  eightDiv = document.getElementById("eightDiv");
+        var  nineDiv = document.getElementById("nineDiv");
+        /*End of Text Element*/
+    
+    
+    var value;
+    var count = 0;
+    function extractUrlParams(){	
+        var t = location.search.substring(1).split('&');
+        var f = [];
+        for (var i=0; i<t.length; i++){
+            var x = t[ i ].split('=');
+            f[x[0]]=x[1];
+        }
+        if (f.search === undefined)
+        {f.search = "hall-of-fame"
+            }
+        return f;
+    }
+    
+    var p1 = new Promise(function(resolve) {
+      resolve(extractUrlParams());
+     });
+     p1.then((valeur) => {	
+         var Mario = valeur;
+         var p2 = new Promise(function(resolve) {
+    var requestURL = 'https://api.opencritic.com/api/game/search?criteria=${' + Mario.search + '}';
+    var request = new XMLHttpRequest();
+    request.open('GET', requestURL);
+    request.responseType = 'json';
+    request.send(); 
+    request.onload = function() {
+      value = request.response;
+       resolve(value);
+    }
+     }); 
+     p2.then((P2value) => {
+          value.forEach(function(item){
+              
+          var urlAPI = "https://api.opencritic.com/api/game/"+ P2value[count].id;
+          count += 1;
+    var Newrequest = new XMLHttpRequest();
+    Newrequest.open('GET', urlAPI);
+    Newrequest.responseType = 'json';
+    Newrequest.send();
+    Newrequest.onload = function() {
+      var Newvalue = Newrequest.response;
+      var IMGData = "https:"+ Newvalue.bannerScreenshot.fullRes;
+    var regex = /([\.\?\!\,])/;
+    var regexOfDate = /([T])/;
+    var match = Newvalue.description.match(regex);
+    var index = match.index;
+    var description = Newvalue.description.slice(0,index+1);
+    var editor = Newvalue.Companies[0].name;
+    var matchOfDate = Newvalue.firstReleaseDate.match(regexOfDate);
+    var indexOfDate = matchOfDate.index;
+    var date = Newvalue.firstReleaseDate.slice(0,10);
+    var score = Newvalue.averageScore.toString().slice(0,4);
+    if (score < 0){
+        score = "Nan";
+    };
+    
+      if (oneIMG.src === "")
+      {
+          oneIMG.src = IMGData;
+          var name = document.createElement("h1");
+          name.textContent = Newvalue.name;
+          name.style.fontSize = "20px";
+          oneDiv.appendChild(name);
+          var dateP = document.createElement("p");
+          dateP.textContent = "Release Date: " + date;
+          dateP.style.fontSize = "12px";
+          oneDiv.appendChild(dateP);
+          var note =  document.createElement("p");
+          note.textContent = "Recommended  at "+ score +"%";
+          note.style.fontSize = "12px";
+          oneDiv.appendChild(note);
+          var descriptionP = document.createElement("p");
+          descriptionP.textContent = description;
+          descriptionP.style.fontSize = "15px";
+          oneDiv.appendChild(descriptionP);
+          var editorP = document.createElement("p");
+          editorP.textContent = "Editor: " + editor;
+          editorP.style.fontSize = "12px";
+          oneDiv.appendChild(editorP);
+          }
+          else if (twoIMG.src === "")
+      {
+          twoIMG.src = IMGData;
+          var name = document.createElement("h1");
+          name.textContent = Newvalue.name;
+          name.style.fontSize = "20px";
+          twoDiv.appendChild(name);
+          var dateP = document.createElement("p");
+          dateP.textContent = "Release Date: " + date;
+          dateP.style.fontSize = "12px";
+          twoDiv.appendChild(dateP);
+          var note =  document.createElement("p");
+          note.textContent = "Recommended  at "+ score +"%";
+          note.style.fontSize = "12px";
+          twoDiv.appendChild(note);
+          var descriptionP = document.createElement("p");
+          descriptionP.textContent = description;
+          descriptionP.style.fontSize = "15px";
+          twoDiv.appendChild(descriptionP);
+          var editorP = document.createElement("p");
+          editorP.textContent = "Editor: " + editor;
+          editorP.style.fontSize = "12px";
+          twoDiv.appendChild(editorP);
+          }
+          else if (threeIMG.src === "")
+      {
+          threeIMG.src = IMGData;
+          var name = document.createElement("h1");
+          name.textContent = Newvalue.name;
+          name.style.fontSize = "20px";
+          threeDiv.appendChild(name);
+          var dateP = document.createElement("p");
+          dateP.textContent = "Release Date: " + date;
+          dateP.style.fontSize = "12px";
+          threeDiv.appendChild(dateP);
+          var note =  document.createElement("p");
+          note.textContent = "Recommended  at "+ score +"%";
+          note.style.fontSize = "12px";
+          threeDiv.appendChild(note);
+          var descriptionP = document.createElement("p");
+          descriptionP.textContent = description;
+          descriptionP.style.fontSize = "15px";
+          threeDiv.appendChild(descriptionP);
+          var editorP = document.createElement("p");
+          editorP.textContent = "Editor: " + editor;
+          editorP.style.fontSize = "12px";
+          threeDiv.appendChild(editorP);
+          }
+          else if (fourIMG.src === "")
+      {
+          fourIMG.src = IMGData;
+          var name = document.createElement("h1");
+          name.textContent = Newvalue.name;
+          name.style.fontSize = "20px";
+          fourDiv.appendChild(name);
+          var dateP = document.createElement("p");
+          dateP.textContent = "Release Date: " + date;
+          dateP.style.fontSize = "12px";
+          fourDiv.appendChild(dateP);
+          var note =  document.createElement("p");
+          note.textContent = "Recommended  at "+ score +"%";
+          note.style.fontSize = "12px";
+          fourDiv.appendChild(note);
+          var descriptionP = document.createElement("p");
+          descriptionP.textContent = description;
+          descriptionP.style.fontSize = "15px";
+          fourDiv.appendChild(descriptionP);
+          var editorP = document.createElement("p");
+          editorP.textContent = "Editor: " + editor;
+          editorP.style.fontSize = "12px";
+          fourDiv.appendChild(editorP);
+          }
+          else if (fiveIMG.src === "")
+      {
+          fiveIMG.src = IMGData;
+          var name = document.createElement("h1");
+          name.textContent = Newvalue.name;
+          name.style.fontSize = "20px";
+          fiveDiv.appendChild(name);
+          var dateP = document.createElement("p");
+          dateP.textContent = "Release Date: " + date;
+          dateP.style.fontSize = "12px";
+          fiveDiv.appendChild(dateP);
+          var note =  document.createElement("p");
+          note.textContent = "Recommended  at "+ score +"%";
+          note.style.fontSize = "12px";
+          fiveDiv.appendChild(note);
+          var descriptionP = document.createElement("p");
+          descriptionP.textContent = description;
+          descriptionP.style.fontSize = "15px";
+          fiveDiv.appendChild(descriptionP);
+          var editorP = document.createElement("p");
+          editorP.textContent = "Editor: " + editor;
+          editorP.style.fontSize = "12px";
+          fiveDiv.appendChild(editorP);
+          }
+          else if (sixIMG.src === "")
+      {
+          sixIMG.src = IMGData;
+          var name = document.createElement("h1");
+          name.textContent = Newvalue.name;
+          name.style.fontSize = "20px";
+          sixDiv.appendChild(name);
+          var dateP = document.createElement("p");
+          dateP.textContent = "Release Date: " + date;
+          dateP.style.fontSize = "12px";
+          sixDiv.appendChild(dateP);
+          var note =  document.createElement("p");
+          note.textContent = "Recommended  at "+ score +"%";
+          note.style.fontSize = "12px";
+          sixDiv.appendChild(note);
+          var descriptionP = document.createElement("p");
+          descriptionP.textContent = description;
+          descriptionP.style.fontSize = "15px";
+          sixDiv.appendChild(descriptionP);
+          var editorP = document.createElement("p");
+          editorP.textContent = "Editor: " + editor;
+          editorP.style.fontSize = "12px";
+          sixDiv.appendChild(editorP);
+          }
+          else if (sevenIMG.src === "")
+      {
+          sevenIMG.src = IMGData;
+          var name = document.createElement("h1");
+          name.textContent = Newvalue.name;
+          name.style.fontSize = "20px";
+          sevenDiv.appendChild(name);
+          var dateP = document.createElement("p");
+          dateP.textContent = "Release Date: " + date;
+          dateP.style.fontSize = "12px";
+          sevenDiv.appendChild(dateP);
+          var note =  document.createElement("p");
+          note.textContent = "Recommended  at "+ score +"%";
+          note.style.fontSize = "12px";
+          sevenDiv.appendChild(note);
+          var descriptionP = document.createElement("p");
+          descriptionP.textContent = description;
+          descriptionP.style.fontSize = "15px";
+          sevenDiv.appendChild(descriptionP);
+          var editorP = document.createElement("p");
+          editorP.textContent = "Editor: " + editor;
+          editorP.style.fontSize = "12px";
+          sevenDiv.appendChild(editorP);
+          }
+          else if (eightIMG.src === "")
+      {
+          eightIMG.src = IMGData;
+          var name = document.createElement("h1");
+          name.textContent = Newvalue.name;
+          name.style.fontSize = "20px";
+          eightDiv.appendChild(name);
+          var dateP = document.createElement("p");
+          dateP.textContent = "Release Date: " + date;
+          dateP.style.fontSize = "12px";
+          eightDiv.appendChild(dateP);
+          var note =  document.createElement("p");
+          note.textContent = "Recommended  at "+ score +"%";
+          note.style.fontSize = "12px";
+          eightDiv.appendChild(note);
+          var descriptionP = document.createElement("p");
+          descriptionP.textContent = description;
+          descriptionP.style.fontSize = "15px";
+          eightDiv.appendChild(descriptionP);
+          var editorP = document.createElement("p");
+          editorP.textContent = "Editor: " + editor;
+          editorP.style.fontSize = "12px";
+          eightDiv.appendChild(editorP);
+          }
+          else if (nineIMG.src === "")
+      {
+          nineIMG.src = IMGData;
+          var name = document.createElement("h1");
+          name.textContent = Newvalue.name;
+          name.style.fontSize = "20px";
+          nineDiv.appendChild(name);
+          var dateP = document.createElement("p");
+          dateP.textContent = "Release Date: " + date;
+          dateP.style.fontSize = "12px";
+          nineDiv.appendChild(dateP);
+          var note =  document.createElement("p");
+          note.textContent = "Recommended  at "+ score +"%";
+          note.style.fontSize = "12px";
+          nineDiv.appendChild(note);
+          var descriptionP = document.createElement("p");
+          descriptionP.textContent = description;
+          descriptionP.style.fontSize = "15px";
+          nineDiv.appendChild(descriptionP);
+          var editorP = document.createElement("p");
+          editorP.textContent = "Editor: " + editor;
+          editorP.style.fontSize = "12px";
+          nineDiv.appendChild(editorP);
+          }
+    }});
+        })});
+    </script>
+    <script>
+      document.getElementById("search-txt").addEventListener("keyup", function(event) {
+          event.preventDefault();
+          if (event.keyCode === 13) {
+              document.location.href="./search.html?search="+document.getElementById("search-txt").value; 
+          }
+      });
+  </script>
+   </body>
+</html>
