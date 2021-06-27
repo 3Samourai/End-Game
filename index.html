@@ -1,334 +1,113 @@
 <html lang="en-US">
-<head>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&amp;display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-  <link rel="canonical" href="https://3samourai.github.io/End-Game/">
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-  <title>Game Finder: End Game</title>
-  <meta name="description" content="Find Information About all New and Old Games">
-	<meta name="keywords" content="Games, FlashCard, Steam, Video Games, GOG, PS5, Xbox, Fortnite, video games for xbox one, video games for ps4, video games for ps4">
-	<meta name="apple-mobile-web-app-title" content="End Game">
-	<meta name="application-name" content="End Game">
-	<meta name="google-site-verification" content="1u_g1cG-B9VNASDMyJC4fxvvacjHmabK_TaCzDFydlw" />
-	<meta id="page-meta-twitter:title" name="twitter:title" property="twitter:title" content="#EndGame">
-	<meta id="page-meta-twitter:description" name="twitter:description" property="twitter:description" content="Find Information About all New and Old Games">
-		</head>
-<body>
-<style>
-body {
-	font-family: 'Poppins', sans-serif;
-}
+     <head>
+        <meta charset="UTF-8">
+        <title>End Game - Game Database</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--SEO-->
+        <link rel="canonical" href="https://3samourai.github.io/End-Game/">
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        <meta name="description" content="End-Game is a Video Games Data Base">
+        <meta name="apple-mobile-web-app-title" content="End Game">
+        <meta name="application-name" content="End Game">
+        <meta name="google-site-verification" content="1u_g1cG-B9VNASDMyJC4fxvvacjHmabK_TaCzDFydlw" />
+        <meta id="page-meta-twitter:title" name="twitter:title" property="twitter:title" content="#EndGame">
+        <meta id="page-meta-twitter:description" name="twitter:description" property="twitter:description" content="End-Game is a Video Games Data Base #EndGame">
+        <!--End SEO-->
+     </head>
+    <body>
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src="./img/EndGame.png"></a>
+                <div class="nav-links" id="nav-links">
+                    <!--Close Phone Menu-->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16" onclick="hideMenu()">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                      </svg>
+                    <ul>
+                        <li><a href="./index.html">HOME</a></li>
+                       <li><a href="./Console.html">CONSOLE</a></li>
+                       <li><a href="./search.html">TOP GAMES</a></li>
+                        <li>
+                        <div class="search-box">
+                            <input type="text" id="search-txt" class="search-txt" placeholder="Search..."/>
+                            <a class="search-btn">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-search" viewBox="0 0 16 16">
+                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                               </svg>
+                            </a>
+                           </div>
+                        </li>
+                    </ul>
+                    
+                </div>
+                <!---Open Phone Menu-->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16" onclick="showMenu()">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                  </svg>
+                </nav>
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 0.2fr 4fr 1fr;
-  gap: 10px 10px;
-  grid-template-areas:
-    "Header Header Header Header"
-    "body body body body"
-    "footer footer footer footer";
-}
+                  <!---Main Menu-->
+            <div class="text-box"> 
+                <h1>EndGame</h1>
+                <p> EndGame is a Video Games Data Base<br> 
+                    You Can find Information about old and new Video games
+                </p>
+                
+                <div class="main-search-box">
+                    <input type="text" id="main-search-txt" class="main-search-txt" placeholder="Search..."/>
+                   </div>
+                </div>
+            </div>
+        </section>
 
-.Header { 
-	grid-area: Header; 
-	background-color: red;
-}
-
-.body { grid-area: body; }
-
-.footer { 
-  grid-area: footer; 
-  background-color: red;
-
-  }
-
-
-@media screen and (max-width: 500px) {
-.grid-container {
-       grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
-      grid-template-areas:
-    "Header"
-    "body"
-    "footer";
-  }
-}
-
-/*Start header*/
-.gridHeader {
-	  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  gap: 10px 10px;
-  grid-template-areas:
-    "Menu Logo Search";
-    text-align: center; 
-
-}
-
-.menu { grid-area: Menu; }
-.logo { grid-area: Logo; }
-.search { grid-area: Search; }
-
-@media screen and (max-width: 500px) {
- .gridHeader {
-       grid-template-columns: 1fr;
-      grid-template-areas:
-    "Logo"
-    "Menu"
-    "Search";
-  }
-}
-/*End Header*/
-
-/*Start Body*/
-.gridBody {
-	  display: grid;
-       grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    "Search"
-    "Tile"
-    "Description";
-    text-align: center; 
-
-}
-.tile { grid-area: Tile; }
-.description { grid-area: Description; }
-/*End Body*/
-
-/*Start Footer*/
-.gridFooter {
-	  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    "User Logo Credit";
-    text-align: center; 
-
-}
-.user { grid-area: User; }
-.credit { grid-area: Credit; }
-
-@media screen and (max-width: 500px) {
- .gridFooter {
-       grid-template-columns: 1fr;
-      grid-template-areas:
-    "User"
-    "Logo"
-    "Credit";
-  }
-}
-/*End Footer*/
-
-.center {
-   display: grid;
-   place-items: center;
-}
-
-/*Start Tile*/
-
-.gridTile {
-	  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  gap: 10px 10px;
-  grid-template-areas:
-    "Tile1 Tile2 Tile3";
-}
-.tile1 { grid-area: Tile1; }
-.tile2 { grid-area: Tile2; }
-.tile3 { grid-area: Tile3; }
-
-@media screen and (max-width: 800px) {
- .gridtile {
-       grid-template-columns: 1fr;
-      grid-template-areas:
-    "Tile1"
-    "Tile2"
-    "Tile3";
-  }
-}
-/*End Tile*/
-
-hr.rounded {
-  border-top: 8px solid rgb(255, 0, 0);
-  border-radius: 5px;
-  color: aqua;
-}
-input {
-  width: 500px;
-}
-@media only screen and (max-device-width: 800px)
-    { 
-        input[type=text]{
-            width: 300px;
-
-    }
-}
-bold {
-            font-size: 30px;
-
-    }
-.css-input {
-     padding: 5px;
-     font-size: 24px;
-     border-width: 1px;
-     border-color: #CCCCCC;
-     background-color: #ff0000;
-     color: #000000;
-     border-style: solid;
-     border-radius: 0px;
-     box-shadow: 0px 0px 5px rgba(66,66,66,.75);
-    }
-
-/*Start Menu*/
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-/*End Menu*/
-
-.unselectable {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-</style>
-<div class="grid-container">
-  <div class="Header">
-	  <header class="gridHeader">
-		  <a class="menu"><span onclick="openNav()" style="font-size: 20px;" class="unselectable">&#9776; Menu </span>
-      </a>
-		  <a class="logo" href="https://3samourai.github.io/End-Game/">#End-Game</a>
-		  <form class="search" action="/End-Game/search.html">
-        <input style="width: 150px;"
-        type="text" placeholder="Search.." name="search">
-            </form>
-    </header>
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="./index.html">Home</a>
-      <a href="./Console.html">Console</a>
-      <a href="./TopGames.html">Top Games</a>
-     </div>
-  </div>
-  <div class="body">
-	  <div class="gridBody">
-	  <div class="search">
-<div class="center"><h1>What Game You Want Search in the Game Finder ?</h1></div>
-<div class="center">
-<form action="/End-Game/search.html">
-      <input class="css-input" type="text" placeholder="Super Mario" name="search" minlength="4">
-          </form>
-</div>
-</div>
-	  <div class="tile">
-      <p class="center"><bold>Need of Idea</bold></p>
-      <hr class="rounded"/>
-<div class="gridTile"> 
-<div class="tile1">
- <div>
-    <div>
-	    <a href="search.html?search=Super+Mario">
-      <img id=twoIMG src="https://raw.githubusercontent.com/3Samourai/End-Game/main/icon/Mario.jpeg" alt="Super Mario - Game Finder" style="width:300px;height:300px;">
-        </a>
-    </div>
-     </div>
-</div> 
-<div class="tile2">
- <div>
-    <div>
-	    <a href="search.html?search=Pokemon">
-      <img id=twoIMG src="https://raw.githubusercontent.com/3Samourai/End-Game/main/icon/pokemon.jpeg" alt="Pokemon - Game Finder" style="width:300px;height:300px;">
-	      </a>
-    </div>
-     </div>
-</div> 
-<div class="tile3">
- <div>
-    <div>
-	    <a href="search.html?search=Zelda">
-      <img id=twoIMG src="https://raw.githubusercontent.com/3Samourai/End-Game/main/icon/Zelda2.jpeg" alt="The Legende Of Zelda - Game Finder" style="width:300px;height:300px;">
-	      </a>
-    </div>
-     </div>
-</div> 
-</div>  
-<hr class="rounded"/>
-
-	  </div>
-
-    <div class="decription"><a><bold>How-to Use :</bold></a>
-    <p>End-Game is a Game Finder. Just type a keyword or Game Name and see all results. 
-    </p><p>Click on a tile for Get More info about a Game.
-    </p></div>
-	  </div>
-  </div>
-  
-  
-  <div class="footer">
-	  <footer class="gridFooter">
-		   <a class="user" href="https://github.com/3Samourai/">Create by 3Samourai</a>
-		   <a href="https://github.com/3Samourai/End-Game/" class="logo" style="
-    background: rgba(255,255,255,0);"><img src="https://raw.githubusercontent.com/3Samourai/End-Game/main/GitHub-Mark-64px.png" alt="Github" style="
-    padding-top: 5px;"/></a>
-		  <a class="credit" href="https://opencritic.com/">Image, Reviews and Description are provided by OpenCritic.</a>
-  </div>
-</div>
-	<a href="https://github.com/3Samourai/End-Game/" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
-<script>
-  function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-  }
-  
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-  } 
-  </script>
-</body>
+    <section class="game">
+        <h1>Need of Idea</h1>
+        <div class="row">
+            <div class="game-col">
+                <img src="./img/mario.png">
+                <h3>Mario</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam molestie volutpat libero, 
+                    eget venenatis diam.</p>
+            </div>
+            <div class="game-col">
+                <img src="./img/zelda.png">
+                <h3>Zelda</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam molestie volutpat libero, 
+                    eget venenatis diam.</p>
+            </div>
+            <div class="game-col">
+                <img src="./img/pokeball.png" style="background: white;">
+                <h3>Pokemon</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam molestie volutpat libero, 
+                    eget venenatis diam.</p>
+            </div>
+        </div>
+    </section>
+        <!-----Javascript for Toggle Menu-->
+        <script>
+            var menu = document.getElementById("nav-links");
+            function showMenu() {
+                menu.style.right = "0";
+            }
+            function hideMenu() {
+                menu.style.right = "-200px";
+            }
+        </script>
+        <!-----Javascript for Search-->
+        <script>
+            document.getElementById("main-search-txt").addEventListener("keyup", function(event) {
+                event.preventDefault();
+                if (event.keyCode === 13) {
+                    document.location.href="./search.html?search="+document.getElementById("main-search-txt").value; 
+                }
+            });
+            document.getElementById("search-txt").addEventListener("keyup", function(event) {
+                event.preventDefault();
+                if (event.keyCode === 13) {
+                    document.location.href="./search.html?search="+document.getElementById("search-txt").value; 
+                }
+            });
+        </script>
+    </body>
 </html>
